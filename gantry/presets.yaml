@@ -1,0 +1,377 @@
+preset1:
+  name: 'Preset 1'
+  image: 'gantry-admin://images/preset1.png'
+  description: GANTRY5_PLATFORM_PRESET1
+  colors:
+    - '#F2F2F2'
+    - '#54F2D8'
+    - '#F23064'
+  styles:
+    base:
+      background: '#ffffff'
+      text-color: '#030303'
+    hyperlink:
+      linkcolor: '#54f2d8'
+      hovercolor: '#F2A7BB'
+    accent:
+      color-1: '#F23064'
+      color-2: '#54f2d8'
+    font:
+      family-default: 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+      family-title: 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    logo:
+      fontfamily: 'Apple Color Emoji, Segoe UI, Segoe UI Emoji, Segoe UI Symbol'
+      fontsize: '42px'
+      color: '#ffffff'
+    navigation:
+      background: '#f23064'
+      text-color: '#ffffff'
+      fontsize: '21px'
+      fontfamily: 'Almendra'
+    header:
+      background: '#312f38'
+      background-image: 'gantry-media://header/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    intro:
+      background: '#f4f5f7'
+      text-color: '#424753'
+    features:
+      background: '#ffffff'
+      text-color: '#424753'
+    utility:
+      background: '#424753'
+      text-color: '#ffffff'
+    above:
+      background: '#f4f5f7'
+      text-color: '#424753'
+    testimonials:
+      background: '#8f4dae'
+      background-image: 'gantry-media://testimonials/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    expanded:
+      background: '#ffffff'
+      text-color: '#424753'
+    footer:
+      background: '#F23064'
+      text-color: '#ffffff'
+    offcanvas:
+      background: '#4db2b3'
+      text-color: '#eceeef'
+      toggle-color: '#4db2b3'
+
+preset2:
+  name: 'Preset 2'
+  image: 'gantry-admin://images/preset2.png'
+  description: GANTRY5_PLATFORM_PRESET2
+  colors:
+    - '#330066'
+    - '#4c0099'
+    - '#cc126d'
+  styles:
+    base:
+      background: '#ffffff'
+      text-color: '#424753'
+    hyperlink:
+      linkcolor: '#0188DC'
+      hovercolor: '#cd5bf0'
+    accent:
+      color-1: '#4c0099'
+      color-2: '#cc126d'
+    font:
+      family-default: 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+      family-title: 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    logo:
+      fontfamily: 'Apple Color Emoji, Segoe UI, Segoe UI Emoji, Segoe UI Symbol'
+      fontsize: '42px'
+      color: '#ffffff'
+    navigation:
+      background: '#330066'
+      text-color: '#ffffff'
+      fontsize: '21px'
+      fontfamily: 'Almendra'
+    header:
+      background: '#312f38'
+      background-image: 'gantry-media://header/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    intro:
+      background: '#f4f5f7'
+      text-color: '#424753'
+    features:
+      background: '#ffffff'
+      text-color: '#424753'
+    utility:
+      background: '#9029BD'
+      text-color: '#ffffff'
+    above:
+      background: '#f4f5f7'
+      text-color: '#424753'
+    testimonials:
+      background: '#b34b4b'
+      background-image: 'gantry-media://testimonials/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    expanded:
+      background: '#ffffff'
+      text-color: '#424753'
+    footer:
+      background: '#330066'
+      text-color: '#ffffff'
+    offcanvas:
+      background: '#0188dc'
+      text-color: '#eceeef'
+      toggle-color: '#0188dc'
+
+preset3:
+  name: 'Preset 3'
+  image: 'gantry-admin://images/preset3.png'
+  description: GANTRY5_PLATFORM_PRESET3
+  colors:
+    - '#273B40'
+    - '#2A3B30'
+    - '#355c7d'
+  styles:
+    base:
+      background: '#EBFFF5'
+      text-color: '#424753'
+    hyperlink:
+      linkcolor: '#355c7d'
+      hovercolor: '#0188dc'
+    accent:
+      color-1: '#273B40'
+      color-2: '#2A3B30'
+    font:
+      family-default: 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+      family-title: 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    logo:
+      fontfamily: 'Apple Color Emoji, Segoe UI, Segoe UI Emoji, Segoe UI Symbol'
+      fontsize: '42px'
+      color: '#ffffff'
+    navigation:
+      background: '#273B40'
+      text-color: '#ffffff'
+      fontsize: '21px'
+      fontfamily: 'Almendra'
+    header:
+      background: '#355c7d'
+      background-image: 'gantry-media://header/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    intro:
+      background: '#f4f5f7'
+      text-color: '#424753'
+    features:
+      background: '#ffffff'
+      text-color: '#424753'
+    utility:
+      background: '#183228'
+      text-color: '#ffffff'
+    above:
+      background: '#f4f5f7'
+      text-color: '#424753'
+    testimonials:
+      background: '#c06c84'
+      background-image: 'gantry-media://testimonials/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    expanded:
+      background: '#ffffff'
+      text-color: '#424753'
+    footer:
+      background: '#273B40'
+      text-color: '#ffffff'
+    offcanvas:
+      background: '#0188dc'
+      text-color: '#eceeef'
+      toggle-color: '#0188dc'
+
+preset4:
+  name: 'Preset 4'
+  image: 'gantry-admin://images/preset4.png'
+  description: GANTRY5_PLATFORM_PRESET4
+  colors:
+    - '#5C1823'
+    - '#FF3200'
+    - '#F55318'
+  styles:
+    base:
+      background: '#ffffff'
+      text-color: '#2a363b'
+    hyperlink:
+      linkcolor: '#FF6C0A'
+      hovercolor: '#E87702'
+    accent:
+      color-1: '#E0051D'
+      color-2: '#F55318'
+    font:
+      family-default: 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+      family-title: 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    logo:
+      fontfamily: 'Apple Color Emoji, Segoe UI, Segoe UI Emoji, Segoe UI Symbol'
+      fontsize: '42px'
+      color: '#ffffff'
+    navigation:
+      background: '#5C1823'
+      text-color: '#ffffff'
+      fontsize: '21px'
+      fontfamily: 'Almendra'
+    header:
+      background: '#2a363b'
+      background-image: 'gantry-media://header/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    intro:
+      background: '#f4f5f7'
+      text-color: '#2a363b'
+    features:
+      background: '#ffffff'
+      text-color: '#2a363b'
+    utility:
+      background: '#5C1823'
+      text-color: '#ffffff'
+    above:
+      background: '#f4f5f7'
+      text-color: '#2a363b'
+    testimonials:
+      background: '#e84a5f'
+      background-image: 'gantry-media://testimonials/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    expanded:
+      background: '#ffffff'
+      text-color: '#2a363b'
+    footer:
+      background: '#5C1823'
+      text-color: '#ffffff'
+    offcanvas:
+      background: '#2a363b'
+      text-color: '#eceeef'
+      toggle-color: '#e84a5f'
+
+preset5:
+  name: 'Preset 5'
+  image: 'gantry-admin://images/preset5.png'
+  description: GANTRY5_PLATFORM_PRESET5
+  colors:
+    - '#2E332F'
+    - '#FECB00'
+    - '#F68E10'
+  styles:
+    base:
+      background: '#ffffff'
+      text-color: '#2a363b'
+    hyperlink:
+      linkcolor: '#FECB00'
+      hovercolor: '#FFB32D'
+    accent:
+      color-1: '#F68E10'
+      color-2: '#474747'
+    font:
+      family-default: 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+      family-title: 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    logo:
+      fontfamily: 'Apple Color Emoji, Segoe UI, Segoe UI Emoji, Segoe UI Symbol'
+      fontsize: '42px'
+      color: '#ffffff'
+    navigation:
+      background: '#2E332F'
+      text-color: '#ffffff'
+      fontsize: '21px'
+      fontfamily: 'Almendra'
+    header:
+      background: '#474747'
+      background-image: 'gantry-media://header/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    intro:
+      background: '#f4f5f7'
+      text-color: '#2a363b'
+    features:
+      background: '#ffffff'
+      text-color: '#2a363b'
+    utility:
+      background: '#F66C12'
+      text-color: '#ffffff'
+    above:
+      background: '#f4f5f7'
+      text-color: '#2a363b'
+    testimonials:
+      background: '#a8a7a7'
+      background-image: 'gantry-media://testimonials/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    expanded:
+      background: '#ffffff'
+      text-color: '#2a363b'
+    footer:
+      background: '#2E332F'
+      text-color: '#ffffff'
+    offcanvas:
+      background: '#474747'
+      text-color: '#eceeef'
+      toggle-color: '#a8a7a7'
+
+preset6:
+  name: 'Preset 6'
+  image: 'gantry-admin://images/preset6.png'
+  description: GANTRY5_PLATFORM_PRESET6
+  colors:
+    - '#9197A6'
+    - '#363636'
+    - '#4ce8d8'
+  styles:
+    base:
+      background: '#363636'
+      text-color: '#a8a7a7'
+    hyperlink:
+      linkcolor: '#4ce8d8'
+      hovercolor: '#7eebff'
+    accent:
+      color-1: '#a8a7a7'
+      color-2: '#474747'
+    font:
+      family-default: 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+      family-title: 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    logo:
+      fontfamily: 'Apple Color Emoji, Segoe UI, Segoe UI Emoji, Segoe UI Symbol'
+      fontsize: '42px'
+      color: '#ffffff'
+    navigation:
+      background: '#474747'
+      text-color: '#ffffff'
+      fontsize: '21px'
+      fontfamily: 'Almendra'
+    header:
+      background: '#474747'
+      background-image: 'gantry-media://header/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    intro:
+      background: '#474747'
+      text-color: '#ffffff'
+    features:
+      background: '#363636'
+      text-color: '#ffffff'
+    utility:
+      background: '#474747'
+      text-color: '#ffffff'
+    above:
+      background: '#a8a7a7'
+      text-color: '#ffffff'
+    testimonials:
+      background: '#a8a7a7'
+      background-image: 'gantry-media://testimonials/img01.jpg'
+      background-overlay: 'enabled'
+      text-color: '#eceeef'
+    expanded:
+      background: '#363636'
+      text-color: '#ffffff'
+    footer:
+      background: '#474747'
+      text-color: '#ffffff'
+    offcanvas:
+      background: '#474747'
+      text-color: '#eceeef'
+      toggle-color: '#a8a7a7'

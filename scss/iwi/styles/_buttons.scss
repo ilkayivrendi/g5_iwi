@@ -1,0 +1,118 @@
+// Buttons
+%g-button {
+    display: inline-block;
+    font-family: get-font-family($font-family-default);
+    font-weight: $font-weight-bold;
+    font-size: $core-font-size - 0.2;
+    line-height: 1.15;
+    letter-spacing: 0.1rem;
+    border-radius: 4px;
+    color: $white;
+    background: $accent-color-1;
+    border: 1px solid transparent;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 1rem 2.125rem;
+    vertical-align: middle;
+    text-shadow: none;
+    outline: none;
+    @include transition(all 0.2s);
+
+    &:hover, &:active, &:focus {
+        background: darken($accent-color-1, 10%);
+        color: $white;
+    }
+}
+
+%g-border {
+    border: 2px solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-image: -moz-linear-gradient(left, $border-yellow 0%, $border-yellow 20%, $border-red 20%, $border-red 20%, $border-red 40%, $border-blue 40%, $border-blue 40%, $border-red 40%, $border-blue 40%, $border-blue 40%, $border-blue 60%, #45c33b 60%, #45c33b 80%, $border-darkblue 80%, $border-darkblue 80%, $border-darkblue 100%); /* FF3.6+ */
+    border-image: -webkit-gradient(linear, left top, right top, color-stop(0%,$border-yellow), color-stop(20%,$border-yellow), color-stop(20%,$border-red), color-stop(20%,$border-red), color-stop(40%,$border-red), color-stop(40%,$border-blue), color-stop(40%,$border-blue), color-stop(40%,$border-red), color-stop(40%,$border-blue), color-stop(40%,$border-blue), color-stop(60%,$border-blue), color-stop(60%,#45c33b), color-stop(80%,#45c33b), color-stop(80%,$border-darkblue), color-stop(80%,$border-darkblue), color-stop(100%,$border-darkblue)) 1 stretch repeat; /* Chrome,Safari4+ */
+    border-image: -webkit-linear-gradient(left, $border-yellow 0%,$border-yellow 20%,$border-red 20%,$border-red 20%,$border-red 40%,$border-blue 40%,$border-blue 40%,$border-red 40%,$border-blue 40%,$border-blue 40%,$border-blue 60%,#45c33b 60%,#45c33b 80%,$border-darkblue 80%,$border-darkblue 80%,$border-darkblue 100%) 1 stretch repeat; /* Chrome10+,Safari5.1+ */
+    border-image: -o-linear-gradient(left, $border-yellow 0%,$border-yellow 20%,$border-red 20%,$border-red 20%,$border-red 40%,$border-blue 40%,$border-blue 40%,$border-red 40%,$border-blue 40%,$border-blue 40%,$border-blue 60%,#45c33b 60%,#45c33b 80%,$border-darkblue 80%,$border-darkblue 80%,$border-darkblue 100%) 1 stretch repeat; /* Opera 11.10+ */
+    border-image: -ms-linear-gradient(left, $border-yellow 0%,$border-yellow 20%,$border-red 20%,$border-red 20%,$border-red 40%,$border-blue 40%,$border-blue 40%,$border-red 40%,$border-blue 40%,$border-blue 40%,$border-blue 60%,#45c33b 60%,#45c33b 80%,$border-darkblue 80%,$border-darkblue 80%,$border-darkblue 100%) 1 stretch repeat; /* IE10+ */
+    border-image: linear-gradient(to right, $border-yellow 0%,$border-yellow 20%,$border-red 20%,$border-red 20%,$border-red 40%,$border-blue 40%,$border-blue 40%,$border-red 40%,$border-blue 40%,$border-blue 40%,$border-blue 60%,#45c33b 60%,#45c33b 80%,$border-darkblue 80%,$border-darkblue 80%,$border-darkblue 100%) 1 stretch repeat; /* W3C */
+}
+
+
+.button {
+    @extend %g-button;
+
+    &.fa {
+        line-height: 1.15;
+
+        &[class*="fa-"] {
+            &:before, &:after {
+                font-family: FontAwesome;
+            }
+        }
+    }
+
+    &.button-block {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    &.button-xlarge {
+        font-size: $core-font-size + 0.2;
+        padding: 1.9rem 3.525rem;
+    }
+
+    &.button-large {
+        font-size: $core-font-size;
+        padding: 1.7rem 3.325rem;
+    }
+
+    &.button-small {
+        font-size: $core-font-size - 0.3;
+        padding: 1rem 1.9rem;
+    }
+
+    &.button-xsmall {
+        font-size: $core-font-size - 0.4;
+        padding: 0.8rem 1.7rem;
+    }
+
+    &.button-2 {
+        background: $accent-color-2;
+
+        @include transition(all 0.2s);
+
+        &:hover, &:active, &:focus {
+            background: darken($accent-color-2, 10%);
+            color: $white;
+        }
+    }
+
+    &.button-outline {
+        background: transparent;
+        color: $accent-color-1;
+        border-color: $accent-color-1;
+
+        &:hover, &:active, &:focus {
+            background: $accent-color-1;
+            border-color: transparent;
+            color: $white;
+        }
+    }
+
+    &.button-gradient {
+        @include linear-gradient(90deg, $accent-color-1, $accent-color-2);
+        border: none;
+
+        &:hover, &:active, &:focus {
+            background: $accent-color-1;
+            color: white;
+        }
+    }
+
+    &.button-bevel {
+        border-radius: 0.4rem;
+    }
+
+    &.button-oval {
+        border-radius: 2.5rem;
+    }
+}

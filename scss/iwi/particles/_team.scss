@@ -1,0 +1,94 @@
+
+.team-member, .team-member .team-img {
+    position: relative;
+    text-align: center;
+}
+.team-member {
+    overflow: hidden;
+}
+.team-member, .team-member .team-img {
+    position: relative;
+}
+
+.team-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    border: 20px solid rgba($accent-color-1, 0.9);
+    background-color: rgba($accent-color-1, 0);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    color: $utility-text-color;
+
+    &:hover {
+        background-color: rgba($accent-color-1, 0.7);
+    }
+}
+.team-member:hover .team-hover .desk {
+    top: 35%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+.team-hover .desk {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    opacity: 0;
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    transform: translateY(-55%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    padding: 0 20px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+    text-align: center;
+}
+.team-member:hover .team-hover .s-link {
+    bottom: 10%;
+}
+.team-member:hover .team-hover, .team-member:hover .team-hover .desk, .team-member:hover .team-hover .s-link {
+    opacity: 1;
+}
+.team-hover .s-link {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    text-align: center;
+    -webkit-transform: translateY(45%);
+    -ms-transform: translateY(45%);
+    transform: translateY(45%);
+    -webkit-transition: all 0.3s 0.2s;
+    transition: all 0.3s 0.2s;
+    font-size: 35px;
+}
+.desk, .desk h4, .team-hover .s-link a {
+    text-align: center;
+}
+.team-member .s-link a {
+    margin: 0 10px;
+    font-size: 16px;
+}
+.team-title {
+    position: static;
+    padding: 20px 0;
+    display: inline-block;
+    letter-spacing: 2px;
+    width: 100%;
+}
+.team-title h5 {
+    margin-bottom: 0px;
+    display: block;
+    text-transform: uppercase;
+}
+.team-title span {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 1px;
+}

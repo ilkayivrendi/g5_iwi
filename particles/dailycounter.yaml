@@ -1,0 +1,38 @@
+name: Daily Counter
+description: Add Backward Counter Spesific for Date
+type: particle
+icon: fa-clock-o
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+
+    css.class:
+      type: input.text
+      label: CSS Classes
+      description: CSS class name for the particle.
+    
+    day:
+      type: input.number
+      label: Day
+      description: Select a countdown day starts from
+      placeholder: 04
+      default: 0
+
+    hour:
+      type: input.number
+      label: Hour
+      description: Select a countdown Hour starts from (24)
+      placeholder: 16
+      default: 0
+      
+    minute:
+      type: input.number
+      label: Mimnute
+      description: Select a countdown minute starts from
+      placeholder: 30
+      default: 0

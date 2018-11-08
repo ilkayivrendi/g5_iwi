@@ -1,0 +1,15 @@
+name: Hyperlink Colors
+description: Accent colors for the IWI theme
+type: core
+
+form:
+  fields:
+
+    linkcolor:
+      type: input.colorpicker
+      label: Link Color
+      default: "#4db2b3"
+    hovercolor:
+      type: input.colorpicker
+      label: Hover Color
+      default: "#8f4dae"

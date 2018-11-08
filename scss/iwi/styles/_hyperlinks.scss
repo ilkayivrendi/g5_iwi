@@ -1,0 +1,7 @@
+a {
+    color: $hyperlink-linkcolor;
+    @include transition(all 0.2s);
+    &:hover {
+        color: $hyperlink-hovercolor;
+    }
+}

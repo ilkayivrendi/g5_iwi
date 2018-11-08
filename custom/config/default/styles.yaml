@@ -1,0 +1,69 @@
+preset: preset2
+base:
+  background: '#ffffff'
+  text-color: '#424753'
+accent:
+  color-1: '#4c0099'
+  color-2: '#cc126d'
+font:
+  family-title: 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+  family-default: 'Raleway, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+hyperlink:
+  linkcolor: '#0188DC'
+  hovercolor: '#cd5bf0'
+link:
+  regular: '#4db2b3'
+  hover: '#424753'
+logo:
+  fontfamily: 'Apple Color Emoji, Segoe UI, Segoe UI Emoji, Segoe UI Symbol'
+  fontsize: 42px
+  color: '#ffffff'
+navigation:
+  background: '#330066'
+  text-color: '#ffffff'
+  height: 100px
+  fontsize: 21px
+  fontfamily: Almendra
+header:
+  background: '#312f38'
+  background-image: 'gantry-media://header/img01.jpg'
+  background-overlay: enabled
+  text-color: '#eceeef'
+intro:
+  background: '#f4f5f7'
+  text-color: '#424753'
+features:
+  background: '#ffffff'
+  text-color: '#424753'
+utility:
+  background: '#9029BD'
+  text-color: '#ffffff'
+above:
+  background: '#f4f5f7'
+  text-color: '#424753'
+testimonials:
+  background: '#b34b4b'
+  background-image: 'gantry-media://testimonials/img01.jpg'
+  background-overlay: enabled
+  text-color: '#eceeef'
+expanded:
+  background: '#ffffff'
+  text-color: '#424753'
+footer:
+  background: '#330066'
+  text-color: '#ffffff'
+offcanvas:
+  background: '#0188dc'
+  text-color: '#eceeef'
+  toggle-color: '#0188dc'
+  toggle-visibility: '1'
+  width: 12rem
+breakpoints:
+  large-desktop-container: 75rem
+  desktop-container: 60rem
+  tablet-container: 48rem
+  large-mobile-container: 30rem
+  mobile-menu-breakpoint: 48rem
+menu:
+  col-width: 180px
+  animation: g-fade

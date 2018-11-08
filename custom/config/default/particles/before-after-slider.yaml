@@ -1,0 +1,10 @@
+enabled: '1'
+css:
+  class: ''
+firstimage: ''
+secondimage: ''
+labelfirst: ''
+labelsecond: ''
+creditfirst: ''
+creditsecond: ''
+style: vertical

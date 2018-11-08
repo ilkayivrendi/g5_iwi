@@ -1,0 +1,33 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    {% assets in 'head' with { priority: 10 } %}
+        {% if particle.enabled %}
+            <link rel="stylesheet" href="{{ url('gantry-theme://scss/iwi/components/adaptive-modal.css') }}" type="text/css"/>         
+        {% endif %}
+    {% endassets -%}
+
+    {% assets in particle.jslocation|default('footer') with { priority: 10 } %}
+        {% if particle.enabled %}
+            {% do gantry.load('jquery') %}
+            <script src="{{ url('gantry-theme://js/components/adaptive-modal.js') }}" type="text/javascript"></script>
+        {% endif %}
+    {% endassets -%}
+
+{# RandomID for multiple modal creation #}
+{% set randomID = [] %}
+{% for i in 1..10 %}
+    {% set alpha = 'abcdefghijklmnopqrstuvwxyz' %}
+    {% set randomCharacter = random(alpha) %}
+    {% set randomID = randomID|merge([randomCharacter]) %}
+{% endfor %}
+{% set randomID = randomID|join %}
+
+<a href="#{{randomID}}" class="button {% if particle.buttonsize %}{{ particle.buttonsize }}{% endif %} {% if particle.buttonstyle %}{{ particle.buttonstyle }}{% endif %} {% if particle.buttontype %}{{ particle.buttontype }}{% endif %}" data-toggle="adaptive-modal"  style="background-color: {{particle.buttoncolor}}; color: {{particle.textcolor}}; ">{% if particle.buttonicon %}<span class="fa {{particle.buttonicon}}"></span> {% endif %}{{particle.buttonlabel}}</a>
+<div id="{{randomID}}" >
+    <div class="uk-modal-dialog" style="z-index:9999;">
+       {{particle.content | raw}}
+    </div>
+</div>
+
+{% endblock %}

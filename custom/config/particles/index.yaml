@@ -1,0 +1,102 @@
+name: particles
+timestamp: 1541684695
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1468340932
+positions:
+  sidebar: Sidebar
+sections:
+  navigation: Navigation
+  intro: Intro
+  features: Features
+  utility: Utility
+  above: Above
+  testimonials: Testimonials
+  expanded: Expanded
+  header: Header
+  mainbar: Mainbar
+  sidebar: Sidebar
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  iwi-angled:
+    iwi-angled-3210: 'Angled Showcase'
+  content:
+    system-content-7663: 'Page Content'
+  adaptive-modal:
+    adaptive-modal-2342: 'Adaptive Modal'
+  clock:
+    clock-3288: 'Digital Clock'
+  typed:
+    typed-2075: 'Typed Animation'
+  slideshow:
+    slideshow-9152: Slideshow
+  custom:
+    custom-1677: 'Slider Description'
+    custom-2628: 'Content Cubes Description'
+    custom-2991: 'Content Tabs Description'
+  contentcubes:
+    contentcubes-4979: 'Content Cubes'
+  tabs:
+    tabs-8679: 'Styled Tabs'
+  progress-bar:
+    progress-bar-5367: 'Progress Bar'
+  accordion:
+    accordion-4661: Accordion
+  testimonial:
+    testimonial-3621: Testimonials
+  team:
+    team-2035: Team
+    team-7951: Team
+  carousel:
+    carousel-7010: 'Brand Carousel'
+  youtube:
+    youtube-3584: Youtube
+  video_gallery:
+    video_gallery-8328: 'Video Gallery'
+  facebook-like-box:
+    facebook-like-box-7846: 'Facebook Like Box'
+  qr:
+    qr-8458: 'QR generator'
+  twittertimeline:
+    twittertimeline-9232: 'Twitter Box'
+  logo:
+    logo-5517: 'Logo / Image'
+    logo-2550: 'Logo / Image'
+  menu:
+    menu-2193: Menu
+  social:
+    social-6112: Social
+  position:
+    position-position-5748: Sidebar
+  horizontalmenu:
+    horizontalmenu-4472: 'Horizontal Menu'
+  totop:
+    totop-6434: 'To Top'
+  mobile-menu:
+    mobile-menu-1854: Mobile-menu
+inherit:
+  default:
+    navigation: navigation
+    header: header
+    intro: intro
+    features: features
+    utility: utility
+    above: above
+    testimonials: testimonials
+    expanded: expanded
+    mainbar: mainbar
+    system-content-7663: system-content-1587
+    sidebar: sidebar
+    footer: footer
+    offcanvas: offcanvas
+    logo-5517: logo-9608
+    menu-2193: menu-6409
+    social-6112: social-3171
+    position-position-5748: position-position-3949
+    logo-2550: logo-9571
+    horizontalmenu-4472: horizontalmenu-9034
+    totop-6434: totop-8670
+    mobile-menu-1854: mobile-menu-5697

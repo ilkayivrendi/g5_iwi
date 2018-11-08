@@ -1,0 +1,24 @@
+name: Youtube
+description: Reponsive youtube video embed
+type: particle
+icon: fa-youtube
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
+    id:
+      type: input.text
+      label: Video ID
+      description: Enter the ID. https://www.youtube.com/watch?v=ID. Example: ID of https://www.youtube.com/watch?v=bMv_4enya6E is bMv_4enya6E
+      placeholder: Enter the video id
+
+    fullscreen:
+      type: input.checkbox
+      label: Fullscreen
+      description: Allow full screen.
+      default: false

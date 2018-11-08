@@ -1,0 +1,17 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+{% block particle %}
+
+ <a href='{{url(particle.url)}}' target="_blank">
+<div class="infobox ">
+  <div class="image circle">
+    <img src="{{url(particle.image)}}" alt="{{particle.title}}"/></div>
+   
+  <div class="infobox-info hover uk-text-break">
+    
+    <h3>{{particle.title|raw}}</h3>
+    <p>{{particle.desc|raw}}</p>
+    
+  </div>
+</div>
+</a>
+{% endblock %}

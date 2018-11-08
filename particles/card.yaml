@@ -1,0 +1,101 @@
+name: Card
+description: Display Card
+type: particle
+icon: fa-vcard-o
+
+form:
+  fields:
+    enabled:
+      type: enable.enable
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+    
+    cardicon:
+      type: input.icon
+      label: Card Icon
+      description: Select the icon you would like to use.
+
+    cardimage:
+      type: input.imagepicker
+      label: Card Image
+      description: Select the icon you would like to use. 
+    
+    cardtitle:
+      type: input.text
+      label: Card Title
+    
+    descrition:
+      type: textarea.textarea
+      label: Description
+
+    url:
+      type: input.text
+      label: Card Title Link
+   
+    target:
+      type: select.selectize
+      label: Link Target
+      default: _self
+      options:
+        _self: Self
+        _blank: New Window
+    
+    items:
+      type: collection.list
+      array: true
+      label: Buttons
+      description: Add Card Buttons.
+      value: name
+      ajax: true
+
+      fields:
+        .buttonicon:
+          type: input.icon
+          label: Button Icon
+          description: Select desired image.
+        .url:
+          type: input.text
+          label: Title Link
+   
+        .text:
+          type: input.text
+          label: Button Label
+   
+        .target:
+          type: select.selectize
+          label: Link Target
+          default: _self
+          options:
+            _self: Self
+            _blank: New Window
+      
+        .buttonstyle:
+          type: select.select
+          label: Button Style
+          options:
+            1: Button Normal
+            button-outline: Button Outline
+            button-2: Button Color-2
+            button-gradient: Button Gradient
+        
+        .buttontype:
+          type: select.select
+          label: Button Type
+          options:
+            1: Button Normal
+            button-bevel: Button Bevel
+            button-oval: Button Oval
+    
+        .buttonsize: 
+          type: select.select
+          label: Button Size
+          options:
+            button-xsmall: Button XSmall
+            button-small: Button Small
+            button-large: Button Large
+            button-xlarge: Button XLarge
+            button-block: Button Block
+
+
+    

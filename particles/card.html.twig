@@ -1,0 +1,26 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    <div class="card">
+        <div class="card-block">
+            <div class="card-header">
+                <a href="{{ particle.url }}" target="{{ particle.target|default('_self') }}" title="{{ particle.text }}" class="g-link">
+                    {% if particle.cardimage %}
+                        <img class="g-img-circle" src="{{ particle.cardimage }}" width="150" height="150"/>
+                    {% endif %}
+                    <i class="fa {{particle.cardicon}} {% if particle.cardimage %} hidden {% endif %}"></i>
+                    <h3 class="card-title">{{ particle.cardtitle }}</h3>
+                </a>
+            </div>
+            <p class="card-text">{{ particle.descrition }}</p>
+            <div class="card-footer">
+                {% for item in particle.items %}
+                    <a href="{{ item.url }}" target="{{ item.target|default('_self') }}" title="{{ item.text }}" class="button {{ item.buttonsize }} {{ item.buttontype }} {{ item.buttonstyle }}">
+                        {% if item.buttonicon %}
+                            <span class="fa {{item.buttonicon}}"></span>
+                        {% endif %}{{ item.text }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

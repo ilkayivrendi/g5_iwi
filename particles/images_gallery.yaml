@@ -1,0 +1,273 @@
+name: Images Gallery
+description: Create a Images Gallery
+type: particle
+
+form:
+  fields:
+    enabled:
+      type: enable.enable
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+      
+    _note:
+      type: separator.note
+      class: alert alert-info
+      content: '<p>Select the Gallery theme from tabs. If you want to use Grid Gallery please <strong> Disable </strong> Tiles Tab and Enable Grid Tab</p>'
+     
+    tabs:
+     type: container.tabs
+     fields:
+       gallery:
+        label: Gallery Items
+        fields:
+          .items:
+              type: collection.list
+              array: true
+              ajax: true
+              label: Images
+              fields:  
+                .image:
+                  type: input.imagepicker
+                  label: Image
+                  description: Select the main image.
+                .title:
+                  type: input.text
+                  label: Image Title
+                  description: Image Title
+                .desc:
+                  type: input.text
+                  label: Image Desc
+                  description: Image Description
+                .link:
+                  type: input.text
+                  label: Image Link
+                  description: Select the main image.
+                .video:
+                  type: select.selectize
+                  label: Video Site
+                  placeholder: "Select..."
+                  default: no
+                  options:
+                    no: No Video
+                    youtube: YouTube
+                    vimeo: Vimeo
+                .video_id:
+                  type: input.text
+                  label: Video ID
+                 
+       tab_tile:
+         label: Tiles Gallery
+         fields:
+           .tilesenabled:
+             type: enable.enable
+             label: Enabled
+             description: Globally enable the particle.
+             default: true
+
+           .style:
+             type: select.selectize
+             label: Gallery Style
+             default: tiles
+             options:
+               tiles: Normal Tiles
+               justified: Justified Tiles
+               nested: Nested Tiles
+
+           .tiles_settings:
+             type: container.set
+             label: Tiles Settings
+             fields:
+              .tiles_col_width:
+                type: input.number
+                label: Tiles Col Width
+                default: 250
+                placeholder: 250
+                description: Select the Tiles Width as px
+              
+              .tiles_space:
+                type: input.number
+                label: Tiles Space
+                default: 20
+                description: Space between images
+              
+              .tile_border:
+                type: enable.enable
+                label: Enable Border
+                description: Enable Border for Images
+                default: true
+              
+              .tile_border_width:
+                type: input.number
+                label: Border Width
+                default: 3
+                description: Tile Border Width
+              
+              .tile_border_color:
+                type: input.colorpicker
+                label: Border Color
+                description: Tile Border Color
+                default: "#212121"
+              
+              .tile_border_radius:
+                type: input.number
+                label: Border Radius
+                description: Tile border radius (applied to border only, not to outline)
+                default: 0
+              
+              .tile_outline:
+                type: enable.enable
+                label: Enable Outline
+                description: Enable outline of the tile (works only together with the border)
+              
+              .tile_outline_color:
+                type: input.colorpicker
+                label: Outline Color
+
+              .tile_shadow:
+                type: enable.enable
+                label: Tile Shadow
+                default: false
+              
+              .tile_shadow_color:
+                 type: input.colorpicker
+                 label: Shadow Color
+               
+              .tile_overlay:
+                 type: enable.enable
+                 label: Tile Overlay
+                 default: false
+               
+              .tile_overlay_color:
+                 type: input.colorpicker
+                 label: Overlay Color
+                 default: "#000000"
+               
+              .tile_enable_icons:
+                 type: enable.enable
+                 label: Enable Icons
+                 description: Enable Icons on MouseOver
+                 default: false
+               
+              .tile_show_link:
+                 type: enable.enable
+                 label: Show Link Icon
+                 description: Show link Icon on MouseOver to article if link aviable
+                 default: false
+               
+              .tile_image_effect:
+                 type: enable.enable
+                 label: Enable Image Effect
+                 default: false
+               
+              .tile_imageeffect_type:
+                 type: select.selectize
+                 label: Image Effect
+                 placeholder: 'Select...'
+                 options:
+                   bw: 'Black & White'
+                   sepia: 'Sepia'
+                 
+              .tile_imageeffect_reverse:
+                 type: enable.enable
+                 label: Reverse Image Effect
+                 description: Rever the image effect option.
+                 default: false
+                
+           .tile_textpanel_options:
+              type: container.set
+              label: Tile TextPanel Options
+              fields:
+                .tile_enable_textpanel:
+                  type: enable.enable
+                  label: Tile TextPanel
+                  default: false
+
+                .tile_textpanel_alwayson:
+                  type: enable.enable
+                  label: Textpanel Always-On
+                  default: false
+                  
+                .tile_textpanel_position:
+                  type: select.selectize
+                  label: Textpanel Position
+                  default: inside_bottom
+                  options: 
+                    inside_bottom: Bottom
+                    inside_top: Top
+
+                .tile_textpanel_bg:
+                  type: input.colorpicker
+                  label: TextPanel Color
+                  default: '#000000'
+
+       tab_grid:
+         label: Grid Gallery
+         fields:
+           .gridenabled:
+            type: enable.enable
+            label: Enabled
+            description: Globally enable the particle.
+            default: false
+
+           .tile_width:
+              type: input.number
+              label: Tile Width
+             
+           .tile_height:
+             type: input.number
+             label: Tile Height
+          
+           .grid_num_rows:
+             type: input.number
+             label: Row Number
+             default: 3
+           
+           .grid_spc_btw_cols:
+             type: input.number
+             label: Colomns Space
+             default: 20
+
+           .grid_spc_btw_rows:
+             type: input.number
+             label: Rows Space
+             default: 20
+          
+           .navigation_options:
+               type: container.set
+               label: Navigation Options
+               fields:
+                 .navigation_type:
+                   type: select.selectize
+                   label: Navigation Type
+                   default: bullets
+                   options: 
+                     bullets: Bullets
+                     arrows: Arrows
+
+                 .navigation_align:
+                    type: select.selectize
+                    label: Navigation Align
+                    default: center
+                    options: 
+                      center: Center
+                      left: Left
+                      right: Right
+
+                 .arrow_spc:
+                    type: input.number
+                    label: Arrow Space
+                    default: 20
+
+                 .bullets_color:
+                    type: select.selectize
+                    label: Bullets Color
+                    default: gray
+                    options: 
+                      gray: Gray
+                      blue: Blue
+                      brown: Brown
+                      green: Green
+                      red: Red
+
+                 

@@ -1,0 +1,50 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+{% if particle.style == "1" %}
+<div class="uk-slidenav-position uk-text-center" {% if particle.class %} {{ particle.class}}{% endif %} data-uk-slider="" data-uk-slideshow="{autoplay:true}" data-uk-slideset="{small: 1, medium: 3, large: 3, duration: 200,  animation: 'scale'}">
+        <div class="uk-slider-container">
+            <ul class="uk-slider uk-grid uk-grid-width-medium-1-{% if particle.numbercompany%}{{particle.numbercompany}}{% endif %}">
+              {% for item in particle.items %}
+                <li  class="uk-slide-before ">
+                    <div class="uk-overlay uk-overlay-hover">
+                        <div class="companies-image">
+                            <a target="_blank" href="{% if item.link %}{{item.link}}{% endif %}" draggable="false">{% if item.cpnicon %} <span class="fa fa-lg {{ item.icon }}"</span>{% endif %}<img alt="" src="{{url(item.cpnimage)}}" style="height:{% if particle.height %} {{particle.height}}px !important {% else %} auto {% endif%}; width:100% !important" ></a>
+                        </div>
+                        <div class="companies-info uk-overlay-panel uk-overlay-background  uk-overlay-bottom uk-overlay-slide-bottom">
+                            <h4 class="companies-name uk-text-center">
+                                <a target="_blank" href="{% if item.link %}{{item.link}}{% endif %}" draggable="false"> {{item.cpnname | raw}} </a>
+                            </h4>
+                        </div>
+                    </div>
+                </li>
+                  {% endfor %}
+            </ul>
+        </div>
+        <a href="#" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous" draggable="false"></a>
+        <a href="#" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next" draggable="false"></a>
+    </div>
+
+    {% elseif particle.style == "2" %}
+    <div class="uk-slidenav-position uk-text-center {% if particle.class %} {{ particle.class}}{% endif %}"  data-uk-slider="" data-uk-slideshow="{autoplay:true}">
+            <div class="uk-slider-container">
+                <ul class="uk-slider uk-grid uk-grid-width-medium-1-{% if particle.numbercompany%}{{particle.numbercompany}}{% endif %} ">
+                  {% for item in particle.items %}
+                    <li  class="uk-slide-before">
+                        <div class="companies-image">
+                            <a target="_blank" href="{% if item.link %}{{item.link}}{% endif %}">
+                                <img src="{{url(item.cpnimage)}}" style="height:{% if particle.height %} {{particle.height}}px !important {% else %} auto {% endif%}; width:100% !important" alt="Image">
+                            </a>
+                        </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+            </div>
+            <a href="#" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous" draggable="false"></a>
+            <a href="#" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next" draggable="false"></a>
+        </div>
+
+{% endif %}
+
+{% endblock %}

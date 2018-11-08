@@ -1,0 +1,16 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    <div class="iwi-angled {% if particle.css.class %} {{ particle.css.class }}{% endif %}">
+        <div class="iwi-angled-title">
+            {% if particle.title %}<h2>{{ particle.title|raw }}</h2>{% endif %}
+            {% if particle.subtitle %}<h3>{{ particle.subtitle|raw }}</h3>{% endif %}
+        </div>
+        <div class="iwi-angled-left">
+            <div class="uniwi-angled-left" style="background-image: url({{ url(particle.leftimage) }});"></div>
+        </div>
+        <div class="iwi-angled-right">
+            <div class="uniwi-angled-right" style="background-image: url({{ url(particle.rightimage) }});"></div>
+        </div>
+    </div>
+{% endblock %}

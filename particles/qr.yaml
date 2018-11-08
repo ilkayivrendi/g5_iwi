@@ -1,0 +1,42 @@
+name: QR generator
+description: Generator QR with information
+type: particle
+icon: fa-qrcode
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
+    text:
+      type: input.text
+      label: Text
+      description: Customize the text to store in QR.
+
+    size:
+     type: input.text
+     label: Size
+     description: Customize the size of QR (size x size)(Optional).
+
+    color:
+      type: input.colorpicker
+      label: Color
+      description: Customize corlor of QR(Optional).
+
+    bgcolor:
+      type: input.colorpicker
+      label: Background Color
+      description: Customize background corlor of QR(Optional).
+
+    margin:
+      type: input.text
+      label: Margin
+      description: Customize margin of QR(Optional).
+
+    css.class:
+      type: input.text
+      label: Class
+      description: CSS class name for the particle.

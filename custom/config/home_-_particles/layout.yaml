@@ -1,0 +1,368 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1468340932
+layout:
+  navigation: {  }
+  /header/:
+    -
+      - slideshow-9860
+  /intro/:
+    -
+      - custom-5807
+  /features/:
+    -
+      - 'card-5866 33'
+      - 'card-9434 34'
+      - 'card-1761 33'
+  /utility/:
+    -
+      - tabs-3854
+  /above/:
+    -
+      - contentcubes-7850
+  /testimonials/:
+    -
+      - testimonial-5241
+  /expanded/:
+    -
+      - custom-6355
+  /container-main/:
+    -
+      -
+        'mainbar 75': {  }
+      -
+        'sidebar 25': {  }
+  footer: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  header:
+    attributes:
+      boxed: ''
+      class: g-flushed
+  intro:
+    type: section
+    attributes:
+      boxed: ''
+  features:
+    type: section
+    attributes:
+      boxed: ''
+  utility:
+    type: section
+    attributes:
+      boxed: ''
+      class: ''
+  above:
+    type: section
+    attributes:
+      boxed: ''
+  testimonials:
+    type: section
+    attributes:
+      boxed: ''
+  expanded:
+    type: section
+    attributes:
+      boxed: ''
+  mainbar:
+    type: section
+    subtype: main
+  sidebar:
+    type: section
+    subtype: aside
+  container-main:
+    attributes:
+      boxed: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - children
+        - attributes
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+content:
+  slideshow-9860:
+    title: 'Header Slider'
+    attributes:
+      height: '700'
+      autoplayInterval: '4000'
+      items:
+        -
+          image: 'gantry-media://header/img01.jpg'
+          videoiframe: ''
+          alt: ''
+          title: 'Welcome to IWI Core'
+          link: ''
+          target: _parent
+          description: "<div class=\"iwi-intro\">\n    <div class=\"iwi-logo\">\n        <img src=\"gantry-media://logo/iwi-logo.png\" alt=\"\" width=\"150\" height=\"150\"/>\n    </div>\n    <p>Craft memorable, emotive experiences with our Gantry 5 framework. Extend the Experience with IvrendiTech</p>\n</div>"
+          buttons:
+            -
+              text: Download
+              buttonicon: 'fa fa-cloud-download fa-2x'
+              buttonstyle: button-outline
+              buttontype: '1'
+              buttonsize: button-large
+              link: '#'
+              target: _parent
+              name: Download
+            -
+              text: Documentation
+              buttonicon: 'fa fa-book fa-2x'
+              buttonstyle: '1'
+              buttontype: '1'
+              buttonsize: button-large
+              link: 'http://docs.gantry.org/'
+              target: _blank
+              name: Documentation
+          overlaystyle: style3
+          overlaycontainer: '1'
+          overlayposition: middle-center
+          overlayanimation: slide-left
+          overlaywidth: auto
+          class: ''
+          name: 'New item'
+        -
+          image: 'gantry-media://header/img02.jpg'
+          videoiframe: ''
+          alt: ''
+          title: 'Cloud Hosting Solution'
+          link: ''
+          target: _parent
+          description: "<div class=\"iwi-intro\">\n    <div class=\"iwi-logo\">\n        <img src=\"gantry-media://logo/iwi-ivrenditech-logo.png\" alt=\"\" width=\"250\" height=\"250\"/>\n    </div>\n    <p>\nIWI is Supported by <a href=\"https://ivrenditech.com\">IvrendiTech </a>and we are also providing cloud hosting for any kind of web platform.</p>\n</div>"
+          buttons:
+            -
+              text: 'Cloud Hosting'
+              buttonicon: 'fa fa-cloud fa-2x'
+              buttonstyle: button-outline
+              buttontype: button-bevel
+              buttonsize: button-large
+              link: 'https://ivrenditech.com'
+              target: _blank
+              name: 'Cloud Hosting'
+          overlaystyle: style3
+          overlaycontainer: '1'
+          overlayposition: middle-center
+          overlayanimation: fade
+          overlaywidth: '2'
+          class: ''
+          name: 'New item'
+        -
+          image: 'gantry-media://above/img01.jpg'
+          videoiframe: ''
+          alt: ''
+          title: 'IWI is Powered by Gantry 5'
+          link: ''
+          target: _parent
+          description: "<div class=\"iwi-intro\">\n    <div class=\"iwi-logo\">\n        <img src=\"gantry-media://logo/gantry5-logo.png\" alt=\"\" width=\"150\" height=\"150\"/>\n    </div>\n    <p>Gantry 5 is the latest generation of a powerful, flexible open source theming framework currently available for Joomla, WordPress, and Grav.</p>\n</div>\n"
+          buttons:
+            -
+              text: 'Learn More'
+              buttonicon: 'fa fa-question-circle-o'
+              buttonstyle: '1'
+              buttontype: '1'
+              buttonsize: button-large
+              link: 'http://gantry.org/'
+              target: _blank
+              name: 'Learn More'
+          overlaystyle: style3
+          overlaycontainer: '1'
+          overlayposition: middle-center
+          overlayanimation: slide-right
+          overlaywidth: '2'
+          class: ''
+          name: 'New item'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  custom-5807:
+    title: Intro
+    attributes:
+      html: "<div class=\"fp-intro\">\n    <h2 class=\"g-title\">Build your beautiful theme, the way you want it, with IWI</h2>\n    <p>Craft memorable, emotive experiences with our Gantry 5 framework. Extend the Experience with IvrendiTech</p>\n    <div class=\"ipad-mockup\">\n        <img src=\"gantry-media://intro/mockup.png\" alt=\"\" />\n    </div>\n</div>"
+    block:
+      variations: center
+      animationenable: '0'
+      animation: fadeInRight
+  card-5866:
+    title: 'Joomla Card'
+    attributes:
+      cardicon: 'fa fa-joomla'
+      cardtitle: 'Joomla Icon'
+      descrition: 'Bring your website to life with one of the most powerful and popular theming frameworks for Joomla.'
+    block:
+      variations: shadow
+      animationenable: '0'
+      animation: noanimation
+  card-9434:
+    title: 'Wordpress Card'
+    attributes:
+      cardicon: 'fa fa-wordpress'
+      cardtitle: 'Wordpress Support'
+      descrition: 'Gantry extends WordPress'' native functionality, empowering users to manipulate virtually every aspect of their visitors'' experience.'
+      url: '#'
+      items:
+        -
+          buttonicon: 'fa fa-question-circle-o'
+          url: '#'
+          text: 'Learn More'
+          target: _self
+          buttonstyle: '1'
+          buttontype: '1'
+          buttonsize: button-xsmall
+          name: 'Learn More'
+    block:
+      variations: 'shadow rounded box-outline'
+      animationenable: '0'
+      animation: noanimation
+  card-1761:
+    title: Grav
+    attributes:
+      cardicon: 'fa fa-grav'
+      cardtitle: 'Grav CMS Support'
+      descrition: 'Gantry 5 is the first theming framework for Grav, designed by members of the same team that developed the CMS.'
+    block:
+      variations: shadow
+      animationenable: '0'
+      animation: noanimation
+  tabs-3854:
+    title: 'Content Tabs'
+    attributes:
+      mainheading: 'Content Tabs'
+      introtext: 'IWI Core also supports multi-layout tab particle. Check more here.'
+      animation: fade
+      css:
+        class: ''
+      items:
+        -
+          icon: 'fa fa-navicon'
+          title: 'Menu Editor'
+          description: "<p>Gantry 5 includes a new, powerful Menu editor that makes menu organization,\nparticle and module injection, and visual enhancements a breeze. Here are just\na handful of things you can do with Gantry 5’s powerful Menu Editor.</p>\n<div class=\"g-grid size-100\">\n    <div class=\"g-block size-50\">\n        <ul>\n            <li>\n                FontAwesome Icons\n            </li>\n            <li>\n                Easy Module Injection\n            </li>\n            <li>\n                Simple Particle Injection\n            </li>\n            <li>\n                Drag-and-drop Functionality\n            </li>\n            <li>\n                Per-item CSS Classes\n            </li>\n            <li>\n                Submenu Column Control\n            </li>\n        </ul>\n    </div>\n    <div class=\"g-block size-50\">\n        <ul>\n            <li>\n                Easy Organization / Reordering\n            </li>\n            <li>\n                Link Target Designation\n            </li>\n            <li>\n                Multiple Dropdown Styles\n            </li>\n            <li>\n                Per-item Image Support\n            </li>\n            <li>\n                Subtitles\n            </li>\n            <li>\n                Non-destructive\n            </li>\n        </ul>\n    </div>\n</div>\n<div class=\"g-grid\">\n    <div class=\"g-block size-100\">\n        Find out more about using the Menu Editor in our <a href=\"http://docs.gantry.org/gantry5/configure/menu-editor\">documentation</a>.\n    </div>\n</div>"
+          class: ''
+          name: 'Menu Editor'
+        -
+          icon: 'fa fa-columns'
+          title: 'Layout Manager'
+          description: "<p>Gantry 5 includes a new, powerful Menu editor that makes menu organization,\nparticle and module injection, and visual enhancements a breeze. Here are just\na handful of things you can do with Gantry 5’s powerful Menu Editor.</p>\n<div class=\"g-grid size-100\">\n    <div class=\"g-block size-50\">\n        <ul>\n            <li>\n                FontAwesome Icons\n            </li>\n            <li>\n                Easy Module Injection\n            </li>\n            <li>\n                Simple Particle Injection\n            </li>\n            <li>\n                Drag-and-drop Functionality\n            </li>\n            <li>\n                Per-item CSS Classes\n            </li>\n            <li>\n                Submenu Column Control\n            </li>\n        </ul>\n    </div>\n    <div class=\"g-block size-50\">\n        <ul>\n            <li>\n                Easy Organization / Reordering\n            </li>\n            <li>\n                Link Target Designation\n            </li>\n            <li>\n                Multiple Dropdown Styles\n            </li>\n            <li>\n                Per-item Image Support\n            </li>\n            <li>\n                Subtitles\n            </li>\n            <li>\n                Non-destructive\n            </li>\n        </ul>\n    </div>\n</div>\n<div class=\"g-grid\">\n    <div class=\"g-block size-100\">\n        Find out more about using the Menu Editor in our <a href=\"http://docs.gantry.org/gantry5/configure/menu-editor\">documentation</a>.\n    </div>\n</div>"
+          class: ''
+          name: 'Layout Manager'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  contentcubes-7850:
+    title: 'Content Cubes'
+    attributes:
+      items:
+        -
+          image: 'gantry-media://above/img01.jpg'
+          imageposition: left
+          label: Featured
+          title: 'Gantry 5 Won "Best Framework System" at J and Beyond 2016 '
+          content: ''
+          tags:
+            -
+              icon: 'fa fa-tag'
+              link: '#'
+              target: _self
+              text: 'Design Studio'
+            -
+              icon: 'fa fa-tag'
+              link: '#'
+              target: _self
+              text: Photo
+          link: 'http://gantry.org/blog/gantry5-wins-joscar'
+          linktext: '&rarr;'
+          buttonclass: ''
+          buttontarget: _self
+          name: 'Item 1'
+        -
+          image: 'gantry-media://above/img02.jpg'
+          imageposition: right
+          label: Featured
+          title: 'Gantry 5 Has Been Downloaded Over Half a Million Times'
+          content: ''
+          tags:
+            -
+              icon: 'fa fa-tag'
+              link: '#'
+              target: _self
+              text: 'Graphic Design'
+            -
+              icon: 'fa fa-tag'
+              link: '#'
+              target: _self
+              text: 'Website Creation'
+          link: 'http://gantry.org'
+          linktext: '&rarr;'
+          buttonclass: ''
+          buttontarget: _self
+          name: 'Item 2'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  testimonial-5241:
+    title: Testimonials
+    attributes:
+      mainheading: Testimonials
+      introtext: 'What Our Clients Say About Us'
+      class: ''
+      items:
+        -
+          userimage: 'gantry-media://testimonials/woman.jpg'
+          username: 'Sara West'
+          userrole: Client
+          description: 'I love tiramisu topping. Pie I love chocolate bar I love I love cake pudding jelly. I love powder bear claw. Chocolate cake I love I love cake sugar plum sugar plum macaroon.'
+          social:
+            -
+              0: '0'
+              icon: 'fa fa-instagram'
+              link: 'https://www.instagram.com/ivrenditech/'
+            -
+              0: '1'
+              icon: 'fa fa-facebook'
+              link: 'https://www.facebook.com/ivrendiTech'
+            -
+              0: '2'
+              icon: 'fa fa-twitter'
+              link: 'https://twitter.com/ivrendiTech'
+          name: Girl
+        -
+          userimage: 'gantry-media://testimonials/man.jpg'
+          username: 'Leo Gonzales'
+          userrole: 'Lead Marketer'
+          description: 'Chocolate bar cheesecake jelly beans candy canes I love. Liquorice I love cheesecake lollipop bonbon. Gingerbread gingerbread tootsie roll.'
+          social:
+            -
+              0: Instagram
+              icon: 'fa fa-instagram'
+              link: 'https://www.instagram.com/ivrenditech/'
+            -
+              0: Facebook
+              icon: 'fa fa-facebook'
+              link: 'https://www.facebook.com/ivrendiTech'
+            -
+              0: Twitter
+              icon: 'fa fa-twitter'
+              link: 'https://twitter.com/ivrendiTech'
+          name: Boy
+    block:
+      animationenable: '0'
+      animation: noanimation
+  custom-6355:
+    title: 'Develop CMS themes quickly'
+    attributes:
+      html: "<div class=\"fp-multi-column-text\">\n    <h2 class=\"g-title\">Develop CMS themes quickly and efficiently</h2>\n    <div class=\"g-grid\">\n        <div class=\"g-block size-50\">\n            <p>\n                IWI was crafted with love by the <a href=\"http://ivrendiTech.com\">ivrendiTech</a> team to showcase the capabilities of the Gantry 5 framework. IWI is open source and available for free under a dual license system (<a href=\"http://www.opensource.org/licenses/mit-license.php\">MIT</a> or <a href=\"http://www.gnu.org/licenses/old-licenses/gpl-2.0.html\">GPL version 2 or later</a>). You do not have to keep the Gantry or ivrendiTech links and logos in the front end, however, you must ensure that all copyright notices in the code are retained.\n            </p>\n        </div>\n        <div class=\"g-block size-50\">\n            <p>\n                Documentation for Gantry 5 is available on the <a href=\"http://docs.gantry.org\">official Gantry website</a>. You can submit any issues or feature requests for Gantry through <a href=\"http://github.com/gantry/gantry5\">GitHub</a>. A chat room has been set up using <a href=\"https://gitter.im/gantry/gantry5\">Gitter</a> where you can go to talk about the project with developers, contributors, and other members of the community. This is the best place to go to get quick tips and discuss features with others.\n            </p>\n        </div>\n    </div>\n</div>"
+    block:
+      variations: title-center

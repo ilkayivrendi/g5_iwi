@@ -1,0 +1,55 @@
+name: two_sidebars
+timestamp: 1541684695
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/3-col.png'
+  name: two_sidebars
+  timestamp: 1541171309
+positions: {  }
+sections:
+  navigation: Navigation
+  intro: Intro
+  features: Features
+  utility: Utility
+  above: Above
+  testimonials: Testimonials
+  expanded: Expanded
+  header: Header
+  aside: Aside
+  sidebar: Sidebar
+  mainbar: Mainbar
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  custom:
+    custom-6833: Header
+    custom-6361: 'Right Sidebar'
+    custom-4736: Lipsum
+    custom-5490: Content
+    custom-9374: 'Flexible Layouts'
+    custom-4266: Lipsum
+  logo:
+    logo-8790: 'Logo / Image'
+    logo-6491: 'Logo / Image'
+  menu:
+    menu-1357: Menu
+  social:
+    social-5511: Social
+  horizontalmenu:
+    horizontalmenu-4073: 'Horizontal Menu'
+  totop:
+    totop-7578: 'To Top'
+  mobile-menu:
+    mobile-menu-4723: Mobile-menu
+inherit:
+  default:
+    navigation: navigation
+    footer: footer
+    offcanvas: offcanvas
+    logo-8790: logo-9608
+    menu-1357: menu-6409
+    social-5511: social-3171
+    logo-6491: logo-9571
+    horizontalmenu-4073: horizontalmenu-9034
+    totop-7578: totop-8670
+    mobile-menu-4723: mobile-menu-5697

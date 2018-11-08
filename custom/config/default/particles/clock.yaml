@@ -1,0 +1,4 @@
+enabled: '1'
+scale: '5'
+style: TwelveHourClock
+seconds: '1'

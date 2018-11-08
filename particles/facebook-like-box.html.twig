@@ -1,0 +1,31 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+{% if particle.enabled %}
+{% do gantry.load('jquery') %}
+{% endif %}
+{% scripts in 'head' with { priority: 0 } %}
+    <script type="text/javascript">
+     (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/{{ site.language }}/sdk.js#xfbml=1&version=v2.9&appId=1390601241184333";
+        fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+ </script>
+{% endscripts -%}
+
+<div class="fb-page" data-href="{{particle.url}}"
+                     data-tabs="{% if particle.tabs.timeline %} timeline,{% endif %}{% if particle.tabs.events %}events,{% endif %}{% if particle.tabs.messages %} messages{% endif %}" 
+                     data-small-header="{{particle.smallheader}}" 
+                     data-adapt-container-width="true" 
+                     data-hide-cover="{{particle.hidecover}}" 
+                     data-show-facepile="{{particle.showface}}"
+                     data-height="{{particle.height}}">
+                     <blockquote cite="{{particle.url}}" class="fb-xfbml-parse-ignore"><a href="{{particle.url}}"></a></blockquote></div>
+
+<div id="fb-root"></div>
+
+{% endblock %}   

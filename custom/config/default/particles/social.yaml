@@ -1,0 +1,22 @@
+enabled: '1'
+css:
+  class: ''
+title: ''
+target: _blank
+display: both
+items:
+  -
+    icon: 'fa fa-twitter fa-fw'
+    text: ''
+    link: 'http://www.twitter.com/ivrendiTech'
+    name: Twitter
+  -
+    icon: 'fa fa-facebook fa-fw'
+    text: ''
+    link: 'http://www.facebook.com/ivrendiTech'
+    name: Facebook
+  -
+    icon: 'fa fa-instagram fa-fw'
+    text: ''
+    link: 'https://instagram.com/ivrendiTech'
+    name: Instagram

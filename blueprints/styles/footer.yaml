@@ -1,0 +1,15 @@
+name: Footer Styles
+description: Footer section styles for the IWI theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#f23064"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"

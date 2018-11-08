@@ -1,0 +1,7 @@
+preset: preset1
+intro:
+  text-color: '#424753'
+features:
+  text-color: '#424753'
+utility:
+  background: '#424753'

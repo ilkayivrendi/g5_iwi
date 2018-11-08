@@ -1,0 +1,54 @@
+name: Team
+description: Display Team Members
+type: particle
+icon: fa-user
+
+form:
+  fields:
+    enabled:
+      type: enable.enable
+      label: Enableds
+      description: Globally enable the particle.
+      default: true
+
+    title:
+      type: input.text
+      label: Title Text
+
+    image:
+      type: input.imagepicker
+      label: User Image
+
+    name:
+      type: input.text
+      label: Name
+    
+    position:
+      type: input.text
+      label: Role
+      description: Describe the User role in team.
+     
+    description: 
+      type: textarea.textarea
+      label: Short Description
+    
+    items:
+      type: collection.list
+      array: true
+      ajax: true
+      value: name
+      label: Social Icons
+      fields:
+        .icon:
+          type: input.icon
+          label: Icon
+        .link:
+          type: input.text
+          label: Link       
+        .target:
+          type: select.selectize
+          label: Target
+          default: _self
+          options:
+            _blank: New Window
+            _self: Self

@@ -1,0 +1,170 @@
+.g-home-particles {
+    &.g-iwi-style {
+        // Navigation Section
+        #g-navigation {
+            @include breakpoint(no-mobile) {
+                color: fadeout($white);
+                background: transparent;
+                border:0px;
+
+                // Logo Particle
+                .g-logo {
+                    color: $logo-color;
+                    outline: none;
+
+                    &.g-logo-iwi {
+                        svg {
+                            fill: $logo-color;
+                        }
+                    }
+                }
+            }
+
+            // Social Particle
+            .g-social {
+                a {
+                    color: fadeout($white, 50%);
+                    font-family: $font-family-mono;
+                    font-weight: $font-weight-bold;
+                    @include breakpoint(mobile-only) {
+                        color: $accent-color-2;
+                    }
+
+                    &:hover {
+                        color: $white;
+                        @include breakpoint(mobile-only) {
+                            color: $accent-color-1;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Header Section
+        #g-header {
+            text-align: center;
+            padding: 0;
+
+            @include breakpoint(no-mobile) {
+                margin-top: -9.5rem;
+                padding: 0;
+            }
+
+            @include breakpoint(large-mobile-range) {
+                padding-top: 2rem;
+            }
+
+            // Button Outline
+            .button {
+                &.button-outline {
+                    background: transparent;
+                    color: $white;
+                    border-color: fadeout($white, 50%);
+
+                    &:hover, &:active, &:focus {
+                        background: fadeout($white, 50%);
+                        border-color: transparent;
+                    }
+                }
+            }
+        }
+
+        // Intro Section
+        #g-intro {
+            .g-block {
+                margin-left: auto;
+                margin-right: auto;
+
+                @include breakpoint(tablet-range) {
+                        min-width: 16rem;
+                }
+
+                @include breakpoint(desktop-range) {
+                     min-width: 21rem;
+                 }
+
+            }
+
+            .g-content {
+                margin-bottom: 5px;
+                padding-bottom: 5px;
+
+                .iwi-intro {
+                    p {
+                        margin-bottom: 2rem;
+                    }
+                }
+            }
+        }
+
+        // Testimonials
+        .iwi-testimonials {
+            blockquote {
+                margin: 2.5rem 0;
+                border-left: none;
+
+                p {
+                    color: lighten($testimonials-text-color, 20%);
+                    font-size: 1.6rem;
+                }
+
+                footer {
+                    &:after {
+                        display: block;
+                        margin: 0 auto;
+                        width: 2.5rem;
+                        height: 1px;
+                        content: "";
+                        background-color: fadeout($white, 75%);
+                    }
+                }
+            }
+
+            img {
+                margin-bottom: $content-margin * 2;
+                border: 4px solid $white;
+            }
+        }
+
+        // Multi Column Text
+        .iwi-multi-column-text {
+            .g-block {
+                p {
+                    padding: 0 5rem;
+                    border-left: 1px solid $base-border-color;
+
+                    @include breakpoint(mobile-only) {
+                        border: none;
+                    }
+                }
+
+                &:first-child {
+                    p {
+                        padding-left: 0;
+                        padding-right: 5rem;
+                        border-left: 5rem;
+
+                        @include breakpoint(mobile-only) {
+                            padding: 0;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    p {
+                        padding-right: 0;
+                        padding-left: 5rem;
+
+                        @include breakpoint(mobile-only) {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#g-container-main {
+	min-height: 800px !important;
+}

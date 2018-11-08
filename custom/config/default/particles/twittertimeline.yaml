@@ -1,0 +1,13 @@
+enabled: '1'
+url: ''
+width: '350'
+height: '550'
+theme: light
+timeline: twitter-timeline
+datalimit: '20'
+frame:
+  noheader: '0'
+  nofooter: '0'
+  noborders: '0'
+  noscroolbar: '0'
+  transparent: '0'

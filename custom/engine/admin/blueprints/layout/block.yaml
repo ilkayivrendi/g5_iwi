@@ -1,0 +1,166 @@
+name: Block
+description: Layout block.
+type: block
+
+form:
+  fields:
+    block_container:
+      type: container.set
+      id: g-settings-block-attributes
+
+      fields:
+        id:
+          type: input.text
+          label: CSS ID
+          description: Enter the ID for the block without the hash (#) (ie. <code>your-id</code>. You can then reference the element via CSS as <code>#your-id</code>
+          default:
+
+        class:
+          type: input.selectize
+          label: CSS Classes
+          description: Enter CSS class names.
+          default:
+
+        variations:
+          type: input.block-variations
+          label: Variations
+          description: Enter Theme Variations.
+          default:
+
+        extra:
+          type: collection.keyvalue
+          label: Tag Attributes
+          description: Extra Tag attributes.
+          key_placeholder: Key (data-*, style, ...)
+          value_placeholder: Value
+          exclude: ['id', 'class']
+        
+        background:
+          type: input.imagepicker
+          label: Background
+          description: Add background image to this block.
+
+        backgroundcolor:
+          type: input.colorpicker
+          label: Background-Color
+          description: Add background-color to this block.
+
+        animationenable:
+          type: enable.enable
+          default: false
+          label: Animation Enable
+            
+        animation:
+          type: select.selectize
+          label: Animation
+          description: Block Animation Class
+          placeholder: 'Select...'
+          default: noanimation
+          options:
+            noanimation : noanimation
+            bounce :  bounce
+            flash : flash
+            pulse : pulse
+            rubberBand : rubberBand
+            shake : shake
+            headShake : headShake
+            swing : swing
+            tada : tada
+            wobble : wobble
+            jello : jello
+            bounceIn : bounceIn
+            bounceInDown : bounceInDown
+            bounceInLeft : bounceInLeft
+            bounceInRight : bounceInRight
+            bounceInUp : bounceInUp
+            bounceOut : bounceOut
+            bounceOutDown : bounceOutDown
+            bounceOutLeft : bounceOutLeft
+            bounceOutRight : bounceOutRight
+            bounceOutUp : bounceOutUp
+            fadeIn : fadeIn
+            fadeInDown : fadeInDown 
+            fadeInDownBig : fadeInDownBig 
+            fadeInLeft : fadeInLeft
+            fadeInLeftBig : fadeInLeftBig
+            fadeInRight : fadeInRight
+            fadeInRightBig : fadeInRightBig
+            fadeInUp : fadeInUp
+            fadeInUpBig : fadeInUpBig
+            fadeOut : fadeOut
+            fadeOutDown : fadeOutDown
+            fadeOutDownBig : fadeOutDownBig
+            fadeOutLeft : fadeOutLeft
+            fadeOutLeftBig : fadeOutLeftBig
+            fadeOutRight : fadeOutRight
+            fadeOutRightBig : fadeOutRightBig
+            fadeOutUp : fadeOutUp
+            fadeOutUpBig : fadeOutUpBig
+            flipInX : flipInX
+            flipInY : flipInY
+            flipOutX : flipOutX
+            flipOutY : flipOutY
+            lightSpeedIn : lightSpeedIn
+            lightSpeedOut : lightSpeedOut
+            rotateIn : rotateIn
+            rotateInDownLeft : rotateInDownLeft
+            rotateInDownRight : rotateInDownRight
+            rotateInUpLeft : rotateInUpLeft
+            rotateInUpRight : rotateInUpRight
+            rotateOut : rotateOut
+            rotateOutDownLeft : rotateOutDownLeft
+            rotateOutDownRight : rotateOutDownRight
+            rotateOutUpLeft : rotateOutUpLeft
+            rotateOutUpRight : rotateOutUpRight
+            hinge : hinge
+            rollIn : rollIn
+            rollOut : rollOut
+            zoomIn : zoomIn
+            zoomInDown : zoomInDown
+            zoomInLeft : zoomInLeft
+            zoomInRight : zoomInRight
+            zoomInUp : zoomInUp
+            zoomOut : zoomOut 
+            zoomOutDown : zoomOutDown
+            zoomOutLeft : zoomOutLeft
+            zoomOutRight : zoomOutRight
+            zoomOutUp : zoomOutUp
+            slideInDown : slideInDown
+            slideInLeft : slideInLeft
+            slideInRight : slideInRight
+            slideInUp : slideInUp
+            slideOutDown : slideOutDown
+            slideOutLeft : slideOutLeft
+            slideOutRight : slideOutRight
+            slideOutUp : slideOutUp
+
+        _inherit:
+          type: gantry.inherit
+
+    size_container:
+      type: container.set
+      id: g-settings-block-size
+
+      fields:
+        fixed:
+          type: input.checkbox
+          label: Fixed Size
+          description: Make block size fixed. If set, this block will always take the same amount of space.
+
+        size:
+          type: input.text
+          label: Block Size
+          description: Block size in percentages (5-100).
+          class: 'custom-validation-field'
+          formnovalidate: true
+          pattern: '^([5-9]|[1-9][0-9]|8.3|9.1|11.1|12.5|14.3|16.7|33.3|100)$'
+          min: 5
+          max: 100
+          append:
+            type: "text"
+            text: "%"
+
+        _note:
+          type: separator.note
+          class: alert alert-warning center blocksize-note
+          content: 'The <em>Block Size</em> can only be set <span class="blocksize-range">between <strong>#min#</strong>% and <strong>#max#</strong>%</span><span class="blocksize-fixed">to <strong>#max#</strong>%</span>'

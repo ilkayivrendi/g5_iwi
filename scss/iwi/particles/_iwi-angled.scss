@@ -1,0 +1,130 @@
+.iwi-angled {
+  background: #000;
+  color: #fff;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  .iwi-angled-title {
+    position: relative;
+    z-index: 10;
+
+    h2, h3 {
+      color: #fff;
+      text-align: center;
+    }
+    h2 {
+      font-size: calc(1em + 4vw);
+      text-transform: uppercase;
+    }
+  }
+  .iwi-angled-right,
+  .iwi-angled-left {
+    top: 0;
+    height: 100%;
+    width: 75%;
+    position: absolute;
+    overflow: hidden;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    transform: skew(-20deg, 0deg) translate(0, 0);
+  }
+
+  @keyframes moveLeft {
+    0% {
+      transform: skew(-20deg, 0deg) translate(0, 0)
+    }
+    33% {
+      transform: skew(-20deg, 0deg) translate(-50px, 0)
+    }
+    66% {
+      transform: skew(-20deg, 0deg) translate(50px, 0)
+    }
+    100% {
+      transform: skew(-20deg, 0deg) translate(0, 0)
+    }
+  }
+
+  @keyframes moveRight {
+    0% {
+      transform: skew(-20deg, 0deg) translate(0, 0)
+    }
+    33% {
+      transform: skew(-20deg, 0deg) translate(-50px, 0)
+    }
+    66% {
+      transform: skew(-20deg, 0deg) translate(50px, 0)
+    }
+    100% {
+      transform: skew(-20deg, 0deg) translate(0, 0)
+    }
+  }
+
+  .iwi-angled-left {
+    left: -25%;
+    animation-name: moveLeft;
+  }
+
+  .iwi-angled-right {
+    right: -25%;
+    animation-name: moveRight;
+  }
+
+  .uniwi-angled-left,
+  .uniwi-angled-right {
+    height: 100%;
+    width: 125%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    transform: skew(20deg, 0deg) translate(0, 0);
+  }
+
+  @keyframes moveLeftInner {
+    0% {
+      transform: skew(20deg, 0deg) translate(0, 0)
+    }
+    33% {
+      transform: skew(20deg, 0deg) translate(50px, 0)
+    }
+    66% {
+      transform: skew(20deg, 0deg) translate(-50px, 0)
+    }
+    100% {
+      transform: skew(20deg, 0deg) translate(0, 0)
+    }
+  }
+
+  @keyframes moveRightInner {
+    0% {
+      transform: skew(20deg, 0deg) translate(0, 0)
+    }
+    33% {
+      transform: skew(20deg, 0deg) translate(50px, 0)
+    }
+    66% {
+      transform: skew(20deg, 0deg) translate(-50px, 0)
+    }
+    100% {
+      transform: skew(20deg, 0deg) translate(0, 0)
+    }
+  }
+
+  .uniwi-angled-left {
+    left: 0;
+    animation-name: moveLeftInner;
+  }
+
+  .uniwi-angled-right {
+    right: 0;
+    animation-name: moveRightInner;
+  }
+
+}
+

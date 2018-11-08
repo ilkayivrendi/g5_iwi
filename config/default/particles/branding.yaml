@@ -1,0 +1,4 @@
+enabled: '1'
+content: 'Powered by <a href="http://www.ivrenditech.com/" title="Ivrendi Tech" class="g-powered-by">Ivrendi Tech</a>'
+css:
+  class: g-branding

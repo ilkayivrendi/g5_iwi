@@ -1,0 +1,40 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+{% if particle.enabled %}
+{% do gantry.document.addScript(url('gantry-theme://js/components/flipclock.min.js'), 5, 'footer') %}
+{% do gantry.document.addStyle(url('gantry-theme://scss/iwi/components/flipclock.css'), 5) %}
+
+{% set randomClock = [] %}
+{% for i in 1..10 %}
+    {% set alpha = 'abcdefghijklmnopqrstuvwxyz' %}
+    {% set randomCharacter = random(alpha) %}
+    {% set randomClock = randomClock|merge([randomCharacter]) %}
+{% endfor %}
+{% set randomClock = randomClock|join %}
+
+{% assets in 'head' with { priority: 0 } %}
+    <style type="text/css">
+     .{{randomClock}}{
+            zoom: 0.{{particle.scale}};
+            -moz-transform: scale({{particle.scale}})
+    }
+    </style> 
+{% endassets -%}
+
+    <div class="{% if particle.css.class %} {{ particle.css.class }}{% endif %}">
+
+        <div class="{{randomClock}}"></div>
+
+        <script type="text/javascript">
+			jQuery(document).ready(function() {
+                var randomClock{{randomClock}};
+				randomClock{{randomClock}} = jQuery('.{{randomClock}}').FlipClock({
+					clockFace: '{{particle.style}}',
+                    showSeconds:{{ particle.seconds ? 'true' : 'false' }},
+				});
+			});
+	     </script>
+    </div>
+{% endif %}
+{% endblock %}

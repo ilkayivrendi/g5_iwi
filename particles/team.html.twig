@@ -1,0 +1,29 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+<div class="{{ particle.css.class|e }}">
+                     
+     <div class="team-member">
+         <div class="team-img">
+             <img src="{{ url(particle.image)|e }}" alt="team member" class="uk-responsive-height">
+         </div>
+         <div class="team-hover uk-responsive-height">
+             <div class="desk">
+             
+                 <h4><strong>{{particle.title | raw}}</strong></h4>
+                 <span>{{particle.position}}</span>
+                 <h5>{{particle.description | raw}}</h5>
+             </div>
+             <div class="s-link">
+                {% if particle.items %}{% for item in particle.items %}
+                 <a href="{{ item.link }}" target="{{item.target}}"><i class="fa {{item.icon}}"></i></a>
+                {% endfor %}{% endif %}
+             </div>
+         </div>
+     </div>
+     <div class="team-title">
+         <h5>{{particle.name}}</h5>
+         <span>{{particle.position}}</span>
+     </div>
+    </div>       
+{% endblock %}

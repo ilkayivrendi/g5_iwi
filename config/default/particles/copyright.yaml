@@ -1,0 +1,11 @@
+enabled: '1'
+date:
+  start: '2018'
+  end: now
+owner: 'Gantry Framework'
+link: ''
+target: _blank
+additional:
+  text: 'Developed by IvrendiTech exclusively<br />for Gantry 5.'
+css:
+  class: ''

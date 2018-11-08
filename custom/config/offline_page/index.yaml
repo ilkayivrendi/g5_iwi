@@ -1,0 +1,51 @@
+name: offline_page
+timestamp: 1541684695
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/offline.png'
+  name: _offline
+  timestamp: 1541171409
+positions: {  }
+sections:
+  navigation: Navigation
+  intro: Intro
+  features: Features
+  utility: Utility
+  above: Above
+  testimonials: Testimonials
+  expanded: Expanded
+  header: Header
+  mainbar: Mainbar
+  sidebar: Sidebar
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  custom:
+    custom-8642: 'Custom HTML'
+  content:
+    system-content-1587: 'Page Content'
+  logo:
+    logo-1891: 'Logo / Image'
+    logo-3503: 'Logo / Image'
+  menu:
+    menu-8364: Menu
+  social:
+    social-2143: Social
+  horizontalmenu:
+    horizontalmenu-5837: 'Horizontal Menu'
+  totop:
+    totop-6952: 'To Top'
+  mobile-menu:
+    mobile-menu-8576: Mobile-menu
+inherit:
+  default:
+    navigation: navigation
+    footer: footer
+    offcanvas: offcanvas
+    logo-1891: logo-9608
+    menu-8364: menu-6409
+    social-2143: social-3171
+    logo-3503: logo-9571
+    horizontalmenu-5837: horizontalmenu-9034
+    totop-6952: totop-8670
+    mobile-menu-8576: mobile-menu-5697

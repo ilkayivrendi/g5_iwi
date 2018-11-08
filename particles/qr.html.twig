@@ -1,0 +1,22 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+{% if particle.enabled %}
+  {% set text = particle.text|url_encode|raw %}
+  {% if particle.color %}
+    {% set color = particle.color|slice(1,6) %}
+    {% else %}
+    {% set color = "" %}
+  {% endif %}
+  {% if particle.bgcolor %}
+    {% set bgcolor = particle.bgcolor|slice(1,6) %}
+    {% else %}
+    {% set bgcolor = "" %}
+  {% endif %}
+  <div class="qr" style="text-align: center;">
+  <h3 class="g-title">{{particle.text}}</h3>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?data={{text}}&size={{particle.size}}x{{particle.size}}&margin={{particle.margin}}&color={{color}}&bgcolor={{bgcolor}}">
+  </div>
+
+{% endif %}
+{% endblock %}

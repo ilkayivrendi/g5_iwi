@@ -1,0 +1,35 @@
+#g-features {
+    background: $features-background;
+    color: $features-text-color;
+    padding: $section-padding 0;
+
+    p {
+        font-size: 21px;
+    }
+
+    img{
+        width:550px;
+    }
+}
+
+// typically range 60rem to 74.938rem
+@include breakpoint(desktop-range) {
+    #g-features img {
+        width: 100%;
+    }
+}
+
+// typically 48rem to 59.938rem
+@include breakpoint(tablet-range) {
+    #g-features img {
+        width: 100%;
+    }
+
+}
+
+@media print {
+    #g-features {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

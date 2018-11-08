@@ -1,0 +1,32 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+{% block particle %}
+        <div class="iwi-testimonials uk-slidenav-position uk-text-center {% if particle.class %} {{ particle.class}}{% endif %}"  data-uk-slider="{autoplay:true, autoplayInterval:4500}">
+            <div class="g-particle-intro">
+                {% if particle.mainheading %}
+                    <h3 class="g-title g-main-title">{{ particle.mainheading|raw }}</h3>
+                    <div class="g-title-separator {% if particle.introtext == false %}no-intro-text{% endif %}"></div>
+                {% endif %} 
+                {% if particle.introtext %}<p class="g-introtext">{{ particle.introtext|raw }}</p>{% endif %}
+            </div>
+            <div class="uk-slider-container  uk-grid">
+                <ul class="uk-slider uk-width-medium-1-1">
+                  {% for item in particle.items %}
+                    <li  class="uk-slide-before">
+                        <img src="{{ url( item.userimage) }}" class="g-img-circle" width="120" height="120">
+                            <div class="uk-container-center size-70">
+                                <p>{{item.description}}</p>
+                                {% if item.social %}{% for social in item.social %}
+                                    <a href="{{ social.link }}" target="_blank"><i class="fa {{social.icon}} fa-fw"></i></a>
+                                {% endfor %}{% endif %}
+                                <cite><span>{{item.username | raw}}</span>
+                                    <br>{{item.userrole}}</cite>
+                            </div>
+                    </li>
+                  {% endfor %}
+                </ul>
+            </div>
+            <ul class="uk-slider-nav uk-dotnav"></ul>
+            <a href="#" class="uk-slidenav uk-slidenav-previous" data-uk-slider-item="previous" draggable="true"></a>
+            <a href="#" class="uk-slidenav uk-slidenav-next" data-uk-slider-item="next" draggable="true"></a>
+        </div>
+{% endblock %}

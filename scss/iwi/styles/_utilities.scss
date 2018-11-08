@@ -1,0 +1,26 @@
+.noliststyle {
+  list-style: none;
+}
+
+.g-uppercase {
+  text-transform: uppercase;
+}
+
+.g-notexttransform {
+  text-transform: none;
+}
+
+.g-positive-margin-top {
+  margin-top: 23rem;
+}
+
+.g-negative-margin-bottom {
+  margin-bottom: -25rem;
+}
+
+.g-img-circle {
+  border-radius: 100%;
+  border: 5px solid lighten($accent-color-1, 10%);
+  max-width: 150px;
+  max-height: 150px;
+}

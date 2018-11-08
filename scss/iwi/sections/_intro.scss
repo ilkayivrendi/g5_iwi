@@ -1,0 +1,14 @@
+#g-intro {
+    background: $intro-background;
+    color: $intro-text-color;
+    padding: $section-padding 0 0 0;
+    @extend %g-border;
+    border-top:2px;
+}
+
+@media print {
+    #g-intro {
+        background: #fff !important;
+        color: #000 !important;
+    }
+}

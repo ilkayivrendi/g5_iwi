@@ -1,0 +1,215 @@
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.g-featured-box-1 {
+  font-family: 'Poppins', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 8px;
+  min-height: 200px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.2em;
+  text-align: center;
+  font-weight: 300;
+}
+
+.g-featured-box-1 *,
+.g-featured-box-1 *:before,
+.g-featured-box-1 *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.65s ease;
+  transition: all 0.65s ease;
+}
+
+.g-featured-box-1:after {
+  -webkit-transition: all 0.65s ease;
+  transition: all 0.65s ease;
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  bottom: -478px;
+  right: -478px;
+  border-radius: 50%;
+  border: 500px solid transparent;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+  content: '';
+  opacity: 0.8;
+}
+
+.g-featured-box-1 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.g-featured-box-1 i {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  border-radius: 50%;
+  color: #000000;
+  display: block;
+  z-index: 10;
+}
+
+.g-featured-box-1 i:before,
+.g-featured-box-1 i:after {
+  border-radius: 50%;
+}
+
+.g-featured-box-1 i:before {
+  color: #ddd;
+  background-color: #fff;
+  font-size: 37.64705882px;
+  line-height: 64px;
+  text-align: center;
+  width: 64px;
+}
+
+.g-featured-box-1 i:after {
+  position: absolute;
+  top: -14px;
+  bottom: -14px;
+  left: -14px;
+  right: -14px;
+  border: 15px solid #ddd;
+  border-bottom-color: $accent-color-1;
+  border-right-color: $accent-color-1;
+  content: '';
+  z-index: -2;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.g-featured-box-1 i:hover {
+  background-color: #D2B17F;
+  cursor: pointer;
+}
+
+.g-featured-box-1 h3 {
+  top: 20%;
+  color: $accent-color-1;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0;
+  padding: 10px 15px;
+  position: absolute;
+  text-transform: uppercase;
+  background: #fff;
+  line-height: 1.2em;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.g-featured-box-1 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.g-featured-box-1:hover:after,
+.g-featured-box-1.hover:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.g-featured-box-1:hover img,
+.g-featured-box-1.hover img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.g-featured-box-1:hover i:before,
+.g-featured-box-1.hover i:before {
+  color: #2980b9;
+}
+
+.g-featured-box-1:hover i:after,
+.g-featured-box-1.hover i:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.g-featured-box-1:hover h3,
+.g-featured-box-1.hover h3 {
+  opacity: 1;
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,700);
+.g-featured-box-2 {
+  font-family: 'Poppins:400,700', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 8px;
+  min-width: 250px;
+  max-width: 310px;
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.g-featured-box-2 * {
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.g-featured-box-2 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+.g-featured-box-2 figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.g-featured-box-2 h3 {
+
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 3px 0;
+}
+.g-featured-box-2 .title1 {
+  font-weight: 700;
+}
+.g-featured-box-2 .title2 {
+  color: #a58e7c;
+  font-weight: 300;
+}
+.g-featured-box-2 .title3 {
+  font-weight: 700;
+  font-size: 15px;
+}
+.g-featured-box-2 a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.g-featured-box-2:hover img,
+.g-featured-box-2.hover img {
+  -webkit-transform: scale(1.3) rotate(5deg);
+  transform: scale(1.3) rotate(5deg);
+}
+

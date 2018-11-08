@@ -1,0 +1,59 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+{% block particle %}
+
+{% if particle.enabled %}
+
+{% assets in 'head' with { priority: 0 } %}
+{% do gantry.load('jquery') %}
+ <link rel="stylesheet" href="{{ url('gantry-theme://js/components/unitegallery/css/unite-gallery.css') }}" type="text/css"/>
+ <script type="text/javascript" src="{{ url('gantry-theme://js/components/unitegallery/js/unitegallery.min.js') }}"></script>
+ <script type="text/javascript" src="{{ url('gantry-theme://js/components/unitegallery/themes/video/ug-theme-video.js') }}"></script>
+ 
+ {% if particle.videostyle == "bottom-text" %}<link rel="stylesheet" href="{{ url('gantry-theme://js/components/unitegallery/themes/video/skin-bottom-text.css') }}" type="text/css"/>{% endif %}
+ {% if particle.videostyle == "right-thumb" %}<link rel="stylesheet" href="{{ url('gantry-theme://js/components/unitegallery/themes/video/skin-right-thumb.css') }}" type="text/css"/>{% endif %}
+ {% if particle.videostyle == "right-no-thumb" %}<link rel="stylesheet" href="{{ url('gantry-theme://js/components/unitegallery/themes/video/skin-right-no-thumb.css') }}" type="text/css"/>{% endif %}
+ {% if particle.videostyle == "right-title-only" %}<link rel="stylesheet" href="{{ url('gantry-theme://js/components/unitegallery/themes/video/skin-right-title-only.css') }}" type="text/css"/>{% endif %}
+ 
+
+{% endassets -%}
+{% set randomVG = [] %}
+{% for i in 1..10 %}
+    {% set alpha = 'abcdefghijklmnopqrstuvwxyz' %}
+    {% set alphaUpper = alpha|upper %}
+    {% set numbers = '0123456789' %}
+    {% set randomCharacter = random(alpha ~ alphaUpper ~ numbers ~ '-_') %}
+    {% set randomVG = randomVG|merge([randomCharacter]) %}
+{% endfor %}
+{% set randomVG = randomVG|join %}
+
+{% endif %}
+
+<div id="gallery{{randomVG}}">
+{% for item in particle.items %}
+
+   <div data-type="{{item.video}}"
+				 data-title="{{item.title}}"
+				 data-description="{{item.desc}}"
+				 data-thumb=""
+				 data-image=""
+			     data-videoid="{{item.video_id}}" >
+    </div>               
+
+{% endfor %}
+</div>
+
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		
+				jQuery("#gallery{{randomVG}}").unitegallery({
+					gallery_theme: "video",
+                    gallery_width:"100%",
+					theme_skin: "{% if particle.videostyle %}{{particle.videostyle}}{% else %}right-thumb{% endif %}",			//right-thumb | right-title-only | right-no-thumb
+					theme_autoplay:{% if particle.autoplay %} true {% else %} false {% endif %},				//autoplay videos at start.  true / false. Don't working on mobiles.
+					theme_disable_panel_timeout:500,	//How much time the right panel will be disabled. in ms
+				});
+				
+			});			
+
+</script>
+{% endblock %}

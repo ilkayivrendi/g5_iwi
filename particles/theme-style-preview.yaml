@@ -1,0 +1,15 @@
+name: Theme Style
+description: Theme Preset Links
+type: particle
+icon: fa-circle-o
+
+form:
+  fields:
+    enabled:
+      type: enable.enable
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+          
+
+                 

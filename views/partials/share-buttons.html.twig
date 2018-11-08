@@ -1,0 +1,53 @@
+{% set twigTemplate = 'share-buttons.html.twig' %}
+
+
+    {% block share %}
+
+        {# Begin Share-buttons #}
+        {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.enabled', '1') %}
+            {% do gantry.load('jquery') %}
+            {% do gantry.document.addScript(url('gantry-theme://js/components/jssocials.min.js'), 10, 'head') %}
+            {% do gantry.document.addStyle(url('gantry-theme://scss/iwi/components/jssocial/jssocials.css'), 10) %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.themes') == "flat" %} {% do gantry.document.addStyle(url('gantry-theme://scss/iwi/components/jssocial/jssocials-theme-flat.css'), 9) %} {% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.themes') == "classic" %} {% do gantry.document.addStyle(url('gantry-theme://scss/iwi/components/jssocial/jssocials-theme-classic.css'), 9) %} {% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.themes') == "minimal" %} {% do gantry.document.addStyle(url('gantry-theme://scss/iwi/components/jssocial/jssocials-theme-minima.css'), 9) %} {% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.themes') == "plain" %}{% do gantry.document.addStyle(url('gantry-theme://scss/iwi/components/jssocial/jssocials-theme-plain.css'), 9) %} {% endif %}
+        {% endif %}
+        {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.round', '0') %}
+            <style>
+                .round-shares .jssocials-share-link {
+                    border-radius: 50%;
+                }
+            </style>
+        {% endif %}
+
+        <div id="shareButtons" {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.round', '0') %} class="round-shares" {% endif %} style="font-size: {{ gantry.config.get('content.' ~ scope ~ '.share-buttons.fontsize') }}px;"></div>
+
+<script>
+     jQuery(document).ready(function(){
+            jQuery("#shareButtons").jsSocials({
+                url: "{{ post.link }}",
+                text:"{{ site.name }}",
+                shareIn: "popup",
+                showLabel: {{ gantry.config.get('content.' ~ scope ~ '.share-buttons.showlabel') }},
+                showCount: {{ gantry.config.get('content.' ~ scope ~ '.share-buttons.showcount') | raw }},
+                shares: [ {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.email') %}"email",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.twitter') %} { share: "twitter", via: "{{ particle.twittername }}", hashtags: "{{ site.name }}" } ,{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.facebook') %} "facebook",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.googleplus') %} "googleplus",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons') %} "linkedin",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.pinterest') %} "pinterest",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.stumbleupon') %} "stumbleupon",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.whatsapp') %} "whatsapp",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.telegram') %} "telegram",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.viber') %} "viber",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.pocket') %} "pocket",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.messenger') %} "messenger",{% endif %}
+                {% if gantry.config.get('content.' ~ scope ~ '.share-buttons.sharebuttons.vkontakte') %} "vkontakte"{% endif %}]
+            });
+        });
+
+</script>
+
+    {% endblock %}
+

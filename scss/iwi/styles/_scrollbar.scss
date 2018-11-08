@@ -1,0 +1,16 @@
+//ScrollBar
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px  lighten( $accent-color-2, 0.8);
+  background-color: $accent-color-2;
+}
+
+::-webkit-scrollbar {
+  width: 0.7rem;
+	background-color: $white;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba($accent-color-1 , 0.3);
+  background-color: lighten( $accent-color-1, 0.6);
+}

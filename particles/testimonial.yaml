@@ -1,0 +1,66 @@
+name: Testimonials
+description: User Testimonials
+type: particle
+icon: fa-home
+
+form:
+  fields:
+    enabled:
+      type: enable.enable
+      label: Enabled
+      description: Globally enable particle.
+      default: true
+
+    mainheading:
+      type: input.text
+      label: Title
+      description: Particle Title
+      placeholder: 'Testiomonials'
+      default: 'Testimonials'
+
+    introtext:
+      type: input.text
+      label: Title
+      description: Intro Text
+      placeholder: 'What they say about us'
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+      default:
+
+    items:
+      type: collection.list
+      label: Social Icons
+      description: Create each items to display.
+      value: name
+      array: true
+      ajax: true
+      fields:
+        .userimage:
+          type: input.imagepicker
+          label: Avatar
+        .username:
+          type: input.text
+          label: Name
+        .userrole:
+          type: input.text
+          label: User Position
+        .description:
+          type: textarea.textarea
+          label: Testimonial
+        .social:
+          type: collection.list
+          array: true
+          label: Social Links
+          description: Social Links.
+          ajax: true
+          fields:
+            .icon:
+              type: input.icon
+              label: Icon
+            .link:
+              type: input.text
+              label: Link
+

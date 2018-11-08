@@ -1,0 +1,93 @@
+name: Twitter Box
+description: Add Your Tweets or Timeline to your post's
+type: particle
+icon: fa-twitter
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable Theme Settings atom.
+      default: true
+  
+    url:
+      label: Twitter Profile Url
+      type: input.url
+      description: Select your tiwtter URL
+    
+    width:
+      label: Box Width 
+      type: input.number
+      placeholder: 350
+      default: 350
+      description: The pixel width of the plugin. If you want Grid Timeline you can raise the width. ex 850.
+   
+    height:
+      label: Box Height 
+      type: input.number
+      placeholder: 550
+      default: 550
+      description: The pixel height of the plugin. 
+  
+    theme:
+      label: Color Theme
+      type: select.selectize
+      default: Light
+      options:
+        light: Light
+        dark: Dark
+
+    _note:
+      type: separator.note
+      class: alert alert-info
+      content: 'For simple Timeline you can use your Profile Url.<br />If you want to use Grid Template Timeline You must create collection from <a href="https://tweetdeck.twitter.com" target="_blank">TweetDeck</a>. And add your new timeline collection URL.<br />Otherwise Box will not show.'
+    
+    timeline:
+      label: Select Timeline Style
+      type: select.selectize
+      default: twitter_timeline
+      options:
+        twitter-timeline: Twitter Timeline
+        twitter-grid: Twitter Grid Timeline
+      
+    datalimit:
+      label: Data Limit
+      type: input.number
+      description: Number of Tweets to Show
+      default: 20
+
+    frame:
+      type: container.set
+      label: Frame Properties
+      fields:
+        .noheader:
+          type: enable.enable
+          label: Hide Header
+          default: 0
+          description: Hides the timeline header. Implementing sites must add their own Twitter attribution
+        
+        .nofooter:
+          type: enable.enable
+          label: Hide Footer
+          default: 0
+          description: Hides the timeline footer and Tweet composer link, if included in the timeline widget type
+        
+        .noborders:
+          type: enable.enable
+          label: Hide Borders
+          default: 0
+          description: Removes all borders within the widget including borders surrounding the widget area and separating Tweets.
+        
+        .noscroolbar:
+          type: enable.enable
+          label: Hide Scroolbar
+          default: 0
+          description: Crops and hides the main timeline scrollbar, if visible. Please consider that hiding standard user interface components can affect the accessibility of your website.
+        
+        .transparent:
+          type: enable.enable
+          label: Make Transparent
+          default: 0
+          description: Removes the widget’s background color.
+        

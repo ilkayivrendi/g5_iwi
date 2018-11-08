@@ -1,0 +1,56 @@
+name: Facebook Like Box
+description: Add your Facebook-Page to your site
+type: particle
+icon: fa-facebook
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Enable the particle
+      default: true
+
+    url:
+      label: Facebook Page Url
+      type: input.url
+      description: Your facebook page url.
+    
+    height:
+      label: Box Height (Optional)
+      type: input.number
+      description: The pixel height of the plugin. Min. is 70
+    
+    showface:
+      label: Show Friend's Face
+      type: enable.enable
+      default: 1
+
+    hidecover:
+      label: Hide Cover
+      type: enable.enable
+      default: 0
+
+    smallheader:
+      label: Small Header
+      type: enable.enable
+      description: Use Small Header
+      default: 0
+
+    tabs:
+      type: container.set
+      label: Facebook Tabs
+      fields:
+        .timeline:
+          type: enable.enable
+          label: Timeline Tab
+          default: 0
+        .events:
+          type: enable.enable
+          label: Events Tab
+          default: 0
+        .messages:
+          type: enable.enable
+          label: Messages Tab
+          default: 0
+        

@@ -1,0 +1,20 @@
+
+.companies-image:hover{
+  -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
+    filter: none;
+}
+
+.uk-overlay-panel a:not([class]) {
+    color: inherit;
+    text-decoration: none !important;
+}
+.companies-image a{
+  display: block;
+}
+
+.companies-info.uk-overlay-panel {
+    padding: 10px;
+}

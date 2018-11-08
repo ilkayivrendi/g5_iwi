@@ -1,0 +1,22 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+{% block particle %}
+    {% if particle.style != '2' %}
+        <div class="shadow">
+            <figure class="g-featured-box-1 g-content">
+                <img src="{{ url(particle.image)|e }}"  alt="{{particle.title}}"/>
+                <i class="ion-android-arrow-forward"></i>
+                <h3 class="g-title">{{ particle.title|e }}</h3>
+                <a href="{{ particle.link }}" target="{{ particle.linktarget }}"></a>
+            </figure>
+        </div>
+    {% else %}
+        <figure class="g-featured-box-2"><img src="{{ url(particle.image)|e }}" alt="{{particle.title}}"/>
+            <figcaption>
+                <h3 class="title1"></h3>
+                <h3 class="title2">{{ particle.title|e }}</h3>
+                <h3 class="title3">Categories</h3>
+            </figcaption>
+            <a href="#"></a>
+        </figure>
+    {% endif %}
+{% endblock %}

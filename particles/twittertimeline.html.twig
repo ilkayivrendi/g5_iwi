@@ -1,0 +1,13 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+
+<a class="{{particle.timeline}}" 
+    data-chrome="{% if particle.frame.noheader %}noheader{% endif %} {% if particle.frame.nofooter %}nofooter{% endif %} {% if particle.frame.noborders %}noborders{% endif %} {% if particle.frame.noscroolbar %}noscroolbar{% endif %} {% if particle.frame.transparent %}transparent{% endif %}"
+    data-limit="{{particle.datalimit}}"  
+    data-width="{{particle.width}}" 
+    data-height="{{particle.height}}" 
+    data-theme="{{particle.theme}}" 
+    href="{{particle.url}}">Ilkay Ivrendi</a>  
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+{% endblock %}   

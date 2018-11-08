@@ -1,0 +1,73 @@
+{% extends '@nucleus/partials/particle.html.twig' %} {% block particle %} {% if particle.title %}
+<h2 class="g-title">{{ particle.title|raw }}</h2>{% endif %}
+
+<div class="g-loginform {{ particle.class|e }}">
+
+    {% if not is_user_logged_in %}
+
+    <form action="{{ function('wp_login_url', gantry.request.server['REQUEST_URI'])|raw }}" method="post" id="g-loginform" class="uk-form-stacked">
+        {% do function('wp_nonce_field', 'log-in') %} {% if particle.pretext is not empty %}
+        <div class="login-pretext">
+            <p>{{ particle.pretext }}</p>
+        </div>
+        {% endif %}
+        <fieldset class="login-data">
+            <div class="uk-margin">
+                <label class="uk-form-label" for="username">{{ __('User Name', 'gantry5') }}</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" name="log" id="form-stacked-text" type="text" alt="username" size="18" placeholder="Username...">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="passwd">{{ __('Password', 'gantry5') }}</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="password" type="password" name="pwd" alt="password" size="18" value="" type="text" placeholder="Password...">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                    <label for="remember">
+                        <input class="uk-checkbox" id="remember" type="checkbox" name="rememberme" checked>{{ __('Remember me', 'gantry5') }}</label>
+                </div>
+            </div>
+
+            <input type="submit" value="{{ __('Log In', 'gantry5') }}" class="button button-small" name="submit" />
+
+        </fieldset>
+
+        <div class="uk-margin login-extra">
+
+                <a href="{{ function('wp_lostpassword_url') }}"  class="button button-small">{{ __('Forgot your password ?', 'gantry5') }}</a>
+            {% if function('get_option', 'users_can_register') %}
+                <a href="{{ function('wp_registration_url') }}" class="button button-small"><i class="fa fa-fw fa-lg fa-sign-in"></i> {{ __('Register', 'gantry5') }}</a>
+            {% endif %}
+        </div>
+
+        {% if particle.posttext is not empty %}
+        <div class="login-posttext">
+            <p>{{ particle.posttext }}</p>
+        </div>
+
+        {% endif %}
+
+    </form>
+
+    {% else %}
+
+    <form action="{{ function('wp_logout_url', gantry.request.server['REQUEST_URI'])|raw }}" method="post" id="g-loginform">
+        {% do function('wp_nonce_field', 'log-out') %}
+        <div class="greeting">
+            <p>{{ particle.greeting|format(current_user.display_name) }}</p>
+        </div>
+        <div class="logout-button">
+            <input type="submit" name="submit" class="button button-small" value="{{ __('Log Out', 'gantry5') }}" />
+        </div>
+    </form>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

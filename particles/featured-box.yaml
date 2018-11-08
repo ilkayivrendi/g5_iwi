@@ -1,0 +1,54 @@
+name: Featured Box
+description: Display content in side-by-side boxes.
+type: particle
+icon: fa-cube
+
+configuration:
+  caching:
+    type: static
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+    style:
+     type: select.selectize
+     label: Select Style
+     description: Select the stle of featured box
+     placeholder: 'Select...'
+     default: '1'
+     options:
+         '1': Style 1
+         '2': Style 2
+    image:
+     type: input.imagepicker
+     label: Image
+     description: Select desired image.
+
+    title:
+     type: input.text
+     label: Title
+     description: Enter the title
+
+    content:
+     type: textarea.textarea
+     label: Content
+     description: Enter the content
+
+    link:
+     type: input.text
+     label: Link
+     description: Input the item link.
+
+    linktarget:
+     type: select.selectize
+     label: Button Target
+     description: Target browser window when item is clicked.
+     placeholder: 'Select...'
+     default: _self
+     options:
+         _self: Self
+         _blank: New Window

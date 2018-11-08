@@ -1,0 +1,28 @@
+name: Navigation Styles
+description: Navigation section styles for the IWI theme
+type: section
+
+form:
+  fields:
+
+    background:
+      type: input.colorpicker
+      label: Background
+      default: "#312f38"
+    text-color:
+      type: input.colorpicker
+      label: Text
+      default: "#ffffff"
+    height:
+      type: input.text
+      label: Height
+      default: "100px"
+    fontsize:
+      type: input.text
+      label: Font Size
+      default: "18px"
+    fontfamily:
+      type: input.fonts
+      label: Font Style
+      default: "family=Almendra"
+

@@ -1,0 +1,46 @@
+/* Chat Posts */
+.format-chat .entry-content p {
+	position: relative;
+	background: $accent-color-1;
+	color: $white;
+	border-radius: .4em;
+	max-width: 50%;
+	padding: 30px;
+	text-align: left;
+	margin-left: auto;
+	&::after{
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 50%;
+		width: 0;
+		height: 0;
+		border: 20px solid transparent;
+		border-left-color: $accent-color-1;
+		border-right: 0;
+		margin-top: -20px;
+		margin-right: -20px;
+	}
+}
+.format-chat .entry-content p:nth-child(odd) {
+	position: relative;
+	background: $accent-color-2;
+	color: $white;
+	border-radius: .4em;
+	max-width: 50%;
+	padding: 30px;
+	margin-left: 0px;
+  &::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: $accent-color-2;
+	border-left: 0;
+	margin-top: -20px;
+	margin-left: -20px;
+  }
+}

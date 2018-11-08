@@ -1,0 +1,687 @@
+version: 2
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: default
+  timestamp: 1468340932
+layout:
+  navigation: {  }
+  header: {  }
+  intro: {  }
+  features: {  }
+  utility: {  }
+  above: {  }
+  testimonials: {  }
+  expanded: {  }
+  /container-main/:
+    -
+      -
+        'mainbar 75':
+          -
+            - iwi-angled-3210
+          -
+            - system-content-7663
+          -
+            - 'adaptive-modal-2342 60'
+            - 'clock-3288 40'
+          -
+            - typed-2075
+          -
+            - slideshow-9152
+          -
+            - custom-1677
+          -
+            - contentcubes-4979
+          -
+            - custom-2628
+          -
+            - tabs-8679
+          -
+            - custom-2991
+          -
+            - progress-bar-5367
+          -
+            - accordion-4661
+          -
+            - testimonial-3621
+          -
+            - 'team-2035 50'
+            - 'team-7951 50'
+          -
+            - carousel-7010
+          -
+            - youtube-3584
+          -
+            - video_gallery-8328
+          -
+            - 'facebook-like-box-7846 33.3'
+            - 'qr-8458 33.3'
+            - 'twittertimeline-9232 33.3'
+      -
+        'sidebar 25': {  }
+  footer: {  }
+  offcanvas: {  }
+structure:
+  navigation:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  header:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  intro:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - children
+  features:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  utility:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  above:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  testimonials:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  expanded:
+    type: section
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  mainbar:
+    type: section
+    subtype: main
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+  sidebar:
+    type: section
+    subtype: aside
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  container-main:
+    attributes:
+      boxed: ''
+  footer:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+  offcanvas:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+        - children
+content:
+  iwi-angled-3210:
+    title: 'Angled Showcase'
+    attributes:
+      title: 'IWI Core is Here'
+      subtitle: 'Ivrendi Web Interface is Best Solution for your Long-Term Web Excistence'
+      leftimage: 'gantry-media://intro/img01.jpg'
+      rightimage: 'gantry-media://intro/img02.jpg'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  system-content-7663:
+    inherit:
+      outline: default
+      include:
+        - attributes
+        - block
+      particle: system-content-1587
+  adaptive-modal-2342:
+    title: 'Adaptive Modal'
+    attributes:
+      buttonicon: 'fa fa-commenting-o'
+      buttonlabel: 'Adaptive Modal Button'
+      buttonsize: button-large
+      buttonstyle: button-outline
+      content: "Marzipan sugar plum wafer topping macaroon macaroon. Croissant fruitcake apple pie cookie biscuit. Pastry sugar plum cake. Liquorice caramels chocolate bar candy cheesecake powder. Ice cream cookie candy canes croissant sweet icing brownie. Cheesecake cake caramels toffee I love cookie candy marshmallow. Sesame snaps macaroon sugar plum apple pie ice cream.\n\nI love icing carrot cake. Chocolate cake I love apple pie caramels dragée donut I love. Sesame snaps sweet jelly muffin cake. Muffin I love sweet marzipan cookie. Marzipan marzipan candy pudding tart. I love jelly-o sesame snaps lemon drops.\n\nDanish gummi bears pastry I love sweet. I love sweet roll candy chupa chups caramels wafer marzipan I love. I love I love cotton candy. Icing I love sugar plum. Jelly candy dessert sweet roll bear claw pastry I love apple pie. Danish icing cotton candy gingerbread.\n\nLiquorice jelly-o candy canes lemon drops cake sugar plum. Soufflé I love topping jelly I love biscuit. Oat cake lollipop tart chocolate bar I love caramels muffin. Pudding chupa chups jelly beans liquorice I love macaroon. Gummies cookie tiramisu biscuit jelly-o toffee powder jelly beans caramels. Dragée icing muffin bonbon icing. Cheesecake apple pie sugar plum.\n\nSesame snaps gummies macaroon halvah. Lollipop I love icing lemon drops cookie. Bonbon wafer sesame snaps gingerbread oat cake candy canes biscuit chocolate cake. Ice cream donut cheesecake oat cake donut. Croissant croissant I love tootsie roll bear claw cake. Pie gingerbread bonbon oat cake caramels danish. Jelly-o gummies jelly."
+    block:
+      animationenable: '0'
+      animation: noanimation
+  clock-3288:
+    title: 'Digital Clock'
+    attributes:
+      scale: '7'
+      style: TwelveHourClock
+      seconds: '1'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  typed-2075:
+    title: 'Typed Animation'
+    attributes:
+      title: 'Typed Animation Particle'
+      loop: '1'
+      items:
+        -
+          typed:
+            text: 'Now that there is the Tec-9, a crappy spray gun from South Miami.'
+          title: 'First Sentence'
+        -
+          typed:
+            text: 'Your bones don''t break, mine do. That''s clear. Your cells react to bacteria and viruses differently than mine.'
+          title: 'Second Sentence'
+        -
+          typed:
+            text: 'I''m serious as a heart attack'
+          title: 'Thirth Sentence'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  slideshow-9152:
+    attributes:
+      mainheading: 'Slider Particle'
+      introtext: "Slider Intro Text\nYou can conain 3 different style of content container"
+      navigation: both
+      items:
+        -
+          image: 'gantry-media://intro/img01.jpg'
+          videoiframe: ''
+          alt: ''
+          title: 'Html & Css Style 1'
+          link: ''
+          target: _parent
+          description: 'Learning HTML and CSS is a lot more challenging than it used to be. Responsive web design adds more layers of complexity to design and develop websites.'
+          buttons: {  }
+          overlaystyle: style1
+          overlaycontainer: '1'
+          overlayposition: middle-center
+          overlayanimation: fade
+          overlaywidth: '2'
+          class: ''
+          name: 'Slide 1'
+        -
+          image: 'gantry-media://intro/img02.jpg'
+          videoiframe: ''
+          alt: 'Alt Tag'
+          title: 'Style 2 Container'
+          link: '#'
+          target: _blank
+          description: 'If you''re already a front-end developer, well, pretend you''re also wearing a pirate hat.'
+          buttons:
+            -
+              text: 'Button 1'
+              buttonicon: ''
+              buttonstyle: '1'
+              buttontype: '1'
+              buttonsize: button-xsmall
+              link: ''
+              target: _parent
+              name: 'New item'
+            -
+              text: 'Button 2'
+              buttonicon: ''
+              buttonstyle: button-outline
+              buttontype: '1'
+              buttonsize: button-xsmall
+              link: ''
+              target: _parent
+              name: 'New item'
+          overlaystyle: style2
+          overlaycontainer: '1'
+          overlayposition: middle-center
+          overlayanimation: scale
+          overlaywidth: '2'
+          class: ''
+          name: 'Slide 2'
+        -
+          image: 'gantry-media://header/img03.jpg'
+          videoiframe: ''
+          alt: ''
+          title: 'Success Style 3'
+          link: '#'
+          target: _parent
+          description: "“A successful website does three things:\nIt attracts the right kinds of visitors.\nGuides them to the main services or product you offer.\nCollect Contact details for future ongoing relation.\""
+          buttons:
+            -
+              text: 'Button 1'
+              buttonicon: ''
+              buttonstyle: '1'
+              buttontype: '1'
+              buttonsize: button-xsmall
+              link: ''
+              target: _parent
+              name: 'New item'
+            -
+              text: 'Button 2'
+              buttonicon: ''
+              buttonstyle: '1'
+              buttontype: '1'
+              buttonsize: button-xsmall
+              link: ''
+              target: _parent
+              name: 'New item'
+          overlaystyle: style3
+          overlaycontainer: '1'
+          overlayposition: middle-center
+          overlayanimation: slide-top
+          overlaywidth: '2'
+          class: ''
+          name: 'Slide 3'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  custom-1677:
+    title: 'Slider Description'
+    attributes:
+      html: "<p>The <strong>Header Slider</strong> particle is a simple and elegant particle, based on the open source project of the same name by <a href=\"http://www.owlcarousel.owlgraphic.com/index.html\">Bartosz Wojciechowski</a>, that displays featured information in a modern slider.</p>\n\n<h3>Particle Configuration</h3>\n<div align=\"center\"><p><img src=\"gantry-media://rocketlauncher/pages/particles/content_tabs_1.jpg\" /></p></div>\n<table>\n<thead><tr>\n<th align=\"left\">Option</th>\n  <th align=\"left\">Description</th>\n</tr></thead>\n<tbody>\n<tr>\n<td align=\"left\">CSS Classes</td>\n  <td align=\"left\">Sets the CSS class for the content of the particle.</td>\n</tr>\n<tr>\n<td align=\"left\">Title</td>\n  <td align=\"left\">Sets the title of the particle, as it will appear on the front end.</td>\n</tr>\n<tr>\n<td align=\"left\">Prev Next</td>\n  <td align=\"left\">Enables a previous / next switcher on the front end.</td>\n</tr>\n<tr>\n<td align=\"left\">Dots</td>\n  <td align=\"left\">Enables or disables pagination dots.</td>\n</tr>\n<tr>\n<td align=\"left\">Autoplay</td>\n  <td align=\"left\">Enables or disables autoplay, allowing the particle to automatically move through items.</td>\n</tr>\n<tr>\n<td align=\"left\">Autoplay Speed</td>\n  <td align=\"left\">Sets the speed at which items are automatically progressed in autoplay.</td>\n</tr>\n<tr>\n<td align=\"left\">Image Overlay</td>\n  <td align=\"left\">Enables or disables the use of image overlay in the particle.</td>\n</tr>\n</tbody>\n</table>\n\n<h3>Item Configuration</h3>\n<div align=\"center\"><p><img src=\"gantry-media://rocketlauncher/pages/particles/content_tabs_2.jpg\" /></p></div>\n<table>\n<thead><tr>\n<th align=\"left\">Option</th>\n  <th align=\"left\">Description</th>\n</tr></thead>\n<tbody>\n<tr>\n<td align=\"left\">Image</td>\n  <td align=\"left\">Enter the path to the image file you wish to use for this item.</td>\n</tr>\n<tr>\n<td align=\"left\">Title</td>\n  <td align=\"left\">Enter a title for the item here.</td>\n</tr>\n<tr>\n<td align=\"left\">Description</td>\n  <td align=\"left\">Enter a description for the item here.</td>\n</tr>\n<tr>\n<td align=\"left\">Link</td>\n  <td align=\"left\">Enter a link for the item here.</td>\n</tr>\n<tr>\n<td align=\"left\">Link Text</td>\n  <td align=\"left\">Enter a the text you want to appear as the link for the item here.</td>\n</tr>\n<tr>\n<td align=\"left\">Button Class</td>\n  <td align=\"left\">You can enter a button class you wish to use for the link button here.</td>\n</tr>\n</tbody>\n</table>"
+    block:
+      animationenable: '0'
+      animation: noanimation
+  contentcubes-4979:
+    title: 'Content Cubes'
+    attributes:
+      title: 'Content Cubes'
+      items:
+        -
+          image: 'gantry-media://above/img01.jpg'
+          imageposition: right
+          label: Particle
+          title: 'This is a sample of the Content Cubes particle in IWI theme.'
+          content: ''
+          tags:
+            -
+              icon: 'fa fa-tag'
+              link: '#'
+              target: _self
+              text: gantry
+            -
+              icon: 'fa fa-tag'
+              link: '#'
+              target: _self
+              text: particle
+            -
+              icon: 'fa fa-tag'
+              link: '#'
+              target: _self
+              text: cube
+          link: '#'
+          linktext: '&rarr;'
+          buttonclass: ''
+          buttontarget: _self
+          name: 'Cube 1'
+        -
+          image: 'gantry-media://above/img02.jpg'
+          imageposition: left
+          label: Particle
+          title: 'This is a sample of the Content Cubes particle in IWI theme.'
+          content: ''
+          tags:
+            -
+              icon: 'fa fa-tag'
+              link: '#'
+              target: _self
+              text: grav
+            -
+              icon: 'fa fa-tag'
+              link: '#'
+              target: _self
+              text: wordpress
+            -
+              icon: 'fa fa-tag'
+              link: '#'
+              target: _self
+              text: joomla
+          link: '#'
+          linktext: '&rarr;'
+          buttonclass: ''
+          buttontarget: _self
+          name: 'Cube 2'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  custom-2628:
+    title: 'Content Cubes Description'
+    attributes:
+      html: "<p>The <strong>Content Cubes</strong> particle is a great way to highlight some of your best content in a way that perfectly complements the theme's design. This is a natural, and aesthetically-pleasing way to ensure that your featured content stands out.</p>\n\n<h3>Particle Configuration</h3>\n<div align=\"center\"><p><img src=\"gantry-media://rocketlauncher/pages/particles/content_cubes_1.jpg\" /></p></div>\n<table>\n<thead><tr>\n<th align=\"left\">Option</th>\n  <th align=\"left\">Description</th>\n</tr></thead>\n<tbody>\n<tr>\n<td align=\"left\">CSS Classes</td>\n  <td align=\"left\">Sets the CSS class for the content of the particle.</td>\n</tr>\n<tr>\n<td align=\"left\">Title</td>\n  <td align=\"left\">Sets the title of the particle, as it will appear on the front end.</td>\n</tr>\n</tbody>\n</table>\n\n<h3>Item Configuration</h3>\n<div align=\"center\"><p><img src=\"gantry-media://rocketlauncher/pages/particles/content_cubes_2.jpg\" /></p></div>\n<table>\n<thead><tr>\n<th align=\"left\">Option</th>\n  <th align=\"left\">Description</th>\n</tr></thead>\n<tbody>\n<tr>\n<td align=\"left\">Image</td>\n  <td align=\"left\">Enter the path to the image file you wish to use for this item.</td>\n</tr>\n<tr>\n<td align=\"left\">Image Position</td>\n  <td align=\"left\">Set whether the image will appear to the left or the right of the text in the item.</td>\n</tr>\n<tr>\n<td align=\"left\">Label</td>\n  <td align=\"left\">Enter a label that appears on the top of the title of the item.</td>\n</tr>\n<tr>\n<td align=\"left\">Title</td>\n  <td align=\"left\">Enter a title for the item. This appears on the front end.</td>\n</tr>\n<tr>\n<td align=\"left\">Link</td>\n  <td align=\"left\">Enter a link that you would like the item to take visitors to when selected.</td>\n</tr>\n<tr>\n<td align=\"left\">Link Text</td>\n  <td align=\"left\">Enter any text you would like to have appear as the link.</td>\n</tr>\n<tr>\n<td align=\"left\">Button Class</td>\n  <td align=\"left\">Set a class that will apply to the link's button for this item in the particle.</td>\n</tr>\n<tr>\n<td align=\"left\">Button Target</td>\n  <td align=\"left\">Set the way you would like the link to open. You can choose between <strong>Self</strong> and <strong>New Window</strong>.</td>\n</tr>\n</tbody>\n</table>\n\n<h3>Item Tags Configuration</h3>\n<div align=\"center\"><p><img src=\"gantry-media://rocketlauncher/pages/particles/content_cubes_3.jpg\" /></p></div>\n<table>\n<thead><tr>\n<th align=\"left\">Option</th>\n  <th align=\"left\">Description</th>\n</tr></thead>\n<tbody>\n<tr>\n<td align=\"left\">Tag Name</th>\n  <td align=\"left\">The name of the tag becomes the tag's name on the front end.</th>\n</tr>\n<tr>\n<td align=\"left\">Tag Icon</td>\n  <td align=\"left\">Select a <strong>Font Awesome</strong> icon you would like to appear alongside the tag's name on the front end.</td>\n</tr>\n<tr>\n<td align=\"left\">Tag Link</td>\n  <td align=\"left\">You can set a specific link that clicking on the tag will take the visitor to, here.</td>\n</tr>\n</tbody>\n</table>"
+  tabs-8679:
+    title: 'Styled Tabs'
+    attributes:
+      mainheading: 'Styled Tabs'
+      introtext: 'This is an intro text for styled tabs '
+      layout: top
+      tabswidth: '2'
+      items:
+        -
+          icon: 'fa fa-align-right'
+          title: 'Tab 1'
+          description: "<h3>Is she dead, yes or no?</h3>\nYour bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.\n\n<h3>Are you ready for the truth?</h3>\nDo you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb."
+          class: ''
+          name: 'New item'
+        -
+          icon: 'fa fa-amazon'
+          title: 'Tab 2'
+          description: "<h3>No man, I don't eat pork</h3>\nNow that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.\n"
+          class: ''
+          name: 'New item'
+        -
+          icon: 'fa fa-align-right'
+          title: 'Tab 3'
+          description: "<h3>I can do that</h3>\nWell, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing."
+          class: ''
+          name: 'New item'
+        -
+          icon: 'fa fa-address-card'
+          title: 'Tab 4'
+          description: "<p>Gantry 5 includes a new, powerful Menu editor that makes menu organization,\nparticle and module injection, and visual enhancements a breeze. Here are just\na handful of things you can do with Gantry 5’s powerful Menu Editor.</p>\n<div class=\"g-grid size-100\">\n    <div class=\"g-block size-50\">\n        <ul>\n            <li>\n                FontAwesome Icons\n            </li>\n            <li>\n                Easy Module Injection\n            </li>\n            <li>\n                Simple Particle Injection\n            </li>\n            <li>\n                Drag-and-drop Functionality\n            </li>\n            <li>\n                Per-item CSS Classes\n            </li>\n            <li>\n                Submenu Column Control\n            </li>\n        </ul>\n    </div>\n    <div class=\"g-block size-50\">\n        <ul>\n            <li>\n                Easy Organization / Reordering\n            </li>\n            <li>\n                Link Target Designation\n            </li>\n            <li>\n                Multiple Dropdown Styles\n            </li>\n            <li>\n                Per-item Image Support\n            </li>\n            <li>\n                Subtitles\n            </li>\n            <li>\n                Non-destructive\n            </li>\n        </ul>\n    </div>\n</div>\n<div class=\"g-grid\">\n    <div class=\"g-block size-100\">\n        Find out more about using the Menu Editor in our <a href=\"http://docs.gantry.org/gantry5/configure/menu-editor\">documentation</a>.\n    </div>\n</div>"
+          class: ''
+          name: 'New item'
+        -
+          icon: 'fa fa-commenting-o'
+          title: 'Menu Editor'
+          description: "<p>Gantry 5 includes a new, powerful Menu editor that makes menu organization,\nparticle and module injection, and visual enhancements a breeze. Here are just\na handful of things you can do with Gantry 5’s powerful Menu Editor.</p>\n<div class=\"g-grid size-100\">\n    <div class=\"g-block size-50\">\n        <ul>\n            <li>\n                FontAwesome Icons\n            </li>\n            <li>\n                Easy Module Injection\n            </li>\n            <li>\n                Simple Particle Injection\n            </li>\n            <li>\n                Drag-and-drop Functionality\n            </li>\n            <li>\n                Per-item CSS Classes\n            </li>\n            <li>\n                Submenu Column Control\n            </li>\n        </ul>\n    </div>\n    <div class=\"g-block size-50\">\n        <ul>\n            <li>\n                Easy Organization / Reordering\n            </li>\n            <li>\n                Link Target Designation\n            </li>\n            <li>\n                Multiple Dropdown Styles\n            </li>\n            <li>\n                Per-item Image Support\n            </li>\n            <li>\n                Subtitles\n            </li>\n            <li>\n                Non-destructive\n            </li>\n        </ul>\n    </div>\n</div>\n<div class=\"g-grid\">\n    <div class=\"g-block size-100\">\n        Find out more about using the Menu Editor in our <a href=\"http://docs.gantry.org/gantry5/configure/menu-editor\">documentation</a>.\n    </div>\n</div>"
+          class: ''
+          name: 'New item'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  custom-2991:
+    title: 'Content Tabs Description'
+    attributes:
+      html: "<p>The <strong>Content Tabs</strong> particle enables you to pack a lot of useful information into a compact space that is easy to configure and intuitive to navigate.</p>\n\n<h3>Particle Configuration</h3>\n<div align=\"center\"><p><img src=\"gantry-media://rocketlauncher/pages/particles/content_tabs_1.jpg\" /></p></div>\n<table>\n<thead><tr>\n<th align=\"left\">Option</th>\n  <th align=\"left\">Description</th>\n</tr></thead>\n<tbody>\n<tr>\n<td align=\"left\">CSS Classes</td>\n  <td align=\"left\">Sets the CSS class for the content of the particle.</td>\n</tr>\n<tr>\n<td align=\"left\">Animation Type</td>\n  <td align=\"left\">Sets the the animation type used when switching between tabs. You can choose between: <strong>Slide Left</strong>, <strong>Slide Right</strong>, <strong>Slide Up</strong>, <strong>Slide Down</strong>, <strong>Fade</strong>, and <strong>Toggle</strong>. </td>\n</tr>\n</tbody>\n</table>\n\n<h3>Item Configuration</h3>\n<div align=\"center\"><p><img src=\"gantry-media://rocketlauncher/pages/particles/content_tabs_2.jpg\" /></p></div>\n<table>\n<thead><tr>\n<th align=\"left\">Option</th>\n  <th align=\"left\">Description</th>\n</tr></thead>\n<tbody>\n<tr>\n<td align=\"left\">Item Name</td>\n  <td align=\"left\">The name of the item becomes the title used for the tab on the front end.</td>\n</tr>\n<tr>\n<td align=\"left\">Tab Content</td>\n  <td align=\"left\">Enter HTML content you would like to display in your tab as its content body here.</td>\n</tr>\n</tbody>\n</table>"
+  progress-bar-5367:
+    title: 'Progress Bar'
+    attributes:
+      style: '1'
+      items:
+        -
+          pb:
+            text: 'Progress Bar Item 1'
+            percent: '30'
+            color: uk-progress-success
+            striped: ''
+            duration: '1'
+          title: 'New item'
+        -
+          pb:
+            text: 'Progress Bar Item 2'
+            percent: '50'
+            color: uk-progress-warning
+            striped: uk-progress-striped
+            duration: '2'
+          title: 'New item'
+        -
+          pb:
+            text: 'Progress Bar Item 3'
+            percent: '70'
+            color: uk-progress-danger
+            striped: ''
+            duration: '3'
+          title: 'New item'
+        -
+          pb:
+            text: 'Progress Bar Item 4'
+            percent: '100'
+            color: ''
+            striped: uk-progress-striped
+            duration: '4'
+          title: 'New item'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  accordion-4661:
+    attributes:
+      mainheading: 'Accordion Particle'
+      introtext: 'This is Accerdion Particle Description Text'
+      items:
+        -
+          title: 'Accordion Item 1'
+          description: "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. \n"
+          class: ''
+          extra: {  }
+          name: 'Accordion Item 1'
+        -
+          title: 'Accordion Item 2'
+          description: "<h3>I can do that</h3>\nYour bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends."
+          class: ''
+          extra: {  }
+          name: 'Accordion Item 2'
+        -
+          title: 'Accordion Item 3'
+          description: "<h3>Are you ready for the truth?</h3>\nLook, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?"
+          class: ''
+          extra: {  }
+          name: 'Accordion Item 3'
+        -
+          title: 'Accordion Item 4'
+          description: "<h3>I gotta piss</h3>\nNow that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit."
+          class: ''
+          extra: {  }
+          name: 'Accordion Item 4'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  testimonial-3621:
+    title: Testimonials
+    attributes:
+      mainheading: Testimonials
+      introtext: ''
+      items:
+        -
+          userimage: 'gantry-media://testimonials/man.jpg'
+          username: Te
+          userrole: Role
+          description: "No, motherfucker\nNow that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. "
+          name: 'New item'
+        -
+          userimage: 'gantry-media://testimonials/woman.jpg'
+          username: Mariann
+          userrole: Role
+          description: "No, motherfucker\nNow that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit. "
+          name: 'New item'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  team-2035:
+    attributes:
+      title: 'Team Member'
+      image: 'gantry-media://testimonials/woman.jpg'
+      name: 'Angel Fly'
+      position: 'Particle Role'
+      description: "<h3>Hold on to your butts</h3>\nLook, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?"
+      items:
+        -
+          icon: 'fa fa-facebook'
+          link: '#'
+          target: _self
+          name: Facebook
+        -
+          icon: 'fa fa-twitter'
+          link: '#'
+          target: _self
+          name: Twitter
+        -
+          icon: 'fa fa-linkedin'
+          link: '#'
+          target: _self
+          name: Linkedin
+        -
+          icon: 'fa fa-instagram'
+          link: '#'
+          target: _self
+          name: Instagram
+    block:
+      animationenable: '0'
+      animation: noanimation
+  team-7951:
+    attributes:
+      title: Sailor
+      image: 'gantry-media://testimonials/man.jpg'
+      name: 'John Bla'
+      position: Sailor
+      description: "<h3>No, motherfucker</h3>\nNow that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the little book that comes with it: the most popular gun in American crime. Like they're actually proud of that shit."
+      items:
+        -
+          icon: 'fa fa-facebook'
+          link: ''
+          target: _self
+          name: Facebook
+        -
+          icon: 'fa fa-instagram'
+          link: ''
+          target: _self
+          name: Instagram
+    block:
+      animationenable: '0'
+      animation: noanimation
+  carousel-7010:
+    title: 'Brand Carousel'
+    attributes:
+      items:
+        -
+          cpnimage: ''
+          cpnlogo: 'fa fa-google'
+          cpnname: ''
+          link: ''
+          name: 'New item'
+        -
+          cpnimage: ''
+          cpnlogo: 'fa fa-linkedin'
+          cpnname: ''
+          link: ''
+          name: 'New item'
+        -
+          cpnimage: ''
+          cpnlogo: 'fa fa-facebook'
+          cpnname: ''
+          link: ''
+          name: 'New item'
+        -
+          cpnimage: ''
+          cpnlogo: 'fa fa-envira'
+          cpnname: ''
+          link: ''
+          name: 'New item'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  youtube-3584:
+    attributes:
+      id: K-McnOai_Zo
+    block:
+      animationenable: '0'
+      animation: noanimation
+  video_gallery-8328:
+    title: 'Video Gallery'
+    attributes:
+      items:
+        -
+          0: '0'
+          video: youtube
+          video_id: Izd5vVuYUAE
+          title: 'Coffe Video '
+          desc: 'Some Description for this video'
+        -
+          0: '1'
+          video: youtube
+          video_id: XcuYoZug5iM
+          title: 'Video 1 '
+          desc: 'Some Description for this video'
+        -
+          0: '2'
+          video: youtube
+          video_id: vvl91y5rRus
+          title: 'Video 2'
+          desc: 'Some Description for this video'
+        -
+          0: '3'
+          video: youtube
+          video_id: K2Q6YO3Ez44
+          title: 'Video 3'
+          desc: 'Some Description for this video'
+        -
+          0: '4'
+          video: youtube
+          video_id: 4oAgc1M5RbQ
+          title: 'Video 4'
+          desc: 'Some Description for this video'
+        -
+          0: '5'
+          video: youtube
+          video_id: 1qfjLCOXMMg
+          title: 'Video 5'
+          desc: 'Some Description for this video'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  facebook-like-box-7846:
+    title: 'Facebook Like Box'
+    attributes:
+      url: 'https://www.facebook.com/ivrendiTech'
+      showface: '1'
+      tabs:
+        timeline: '1'
+        events: '1'
+        messages: '1'
+    block:
+      variations: center
+      animationenable: '0'
+      animation: noanimation
+  qr-8458:
+    title: 'QR generator'
+    attributes:
+      text: 'This is your pages QR Code'
+    block:
+      animationenable: '0'
+      animation: noanimation
+  twittertimeline-9232:
+    title: 'Twitter Box'
+    attributes:
+      url: 'https://twitter.com/ivrenditech'
+      width: '350'
+      height: '550'
+      theme: light
+      timeline: twitter-timeline
+      datalimit: '20'
+    block:
+      variations: center
+      animationenable: '0'
+      animation: noanimation

@@ -1,0 +1,15 @@
+name: Accent Colors
+description: Accent colors for the IWI theme
+type: core
+
+form:
+  fields:
+
+    color-1:
+      type: input.colorpicker
+      label: Accent Color 1
+      default: "#F23064"
+    color-2:
+      type: input.colorpicker
+      label: Accent Color 2
+      default: "#54f2d8"

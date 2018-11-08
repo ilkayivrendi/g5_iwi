@@ -1,0 +1,14 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    {% if particle.enabled %}
+      {% for item in particle.items %}
+      <div class="iwi-progressbar {% if particle.css.class %}{{particle.css.class}} {% endif %} iwi-progressbar-style1 uk-progress {% if item.pb.color %}{{item.pb.color}}{% endif %} {% if item.pb.striped %}{{item.pb.striped}}{% endif %}">
+          <div class="iwi-progressbar-content uk-progress-bar uk-scrollspy-init-inview uk-scrollspy-inview uk-animation-fade "  data-uk-scrollspy="{cls:'uk-animation-slide-left', repeat: true , delay:200}"  style="width:{{item.pb.percent}}%; animation-duration:{% if item.pb.duration %}{{item.pb.duration}}s{% endif %}">
+            <span class="iwi-progressbar-text ">{{item.pb.text}}</span>
+            <span class="iwi-progressbar-percent" style="opacity: 1; margin-right: 0px; margin-left: 10px; position:absolute;">{{item.pb.percent}}%</span>
+          </div>
+      </div>
+      {% endfor %}
+    {% endif %}
+{% endblock %}

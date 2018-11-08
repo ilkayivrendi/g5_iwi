@@ -1,0 +1,38 @@
+enabled: '1'
+items: {  }
+tilesenabled: '1'
+style: tiles
+tiles_settings:
+  tiles_col_width: '250'
+  tiles_space: '20'
+  tile_border: '1'
+  tile_border_width: '3'
+  tile_border_color: '#212121'
+  tile_border_radius: '0'
+  tile_outline: '0'
+  tile_outline_color: ''
+  tile_shadow: '0'
+  tile_shadow_color: ''
+  tile_overlay: '0'
+  tile_overlay_color: '#000000'
+  tile_enable_icons: '0'
+  tile_show_link: '0'
+  tile_image_effect: '0'
+  tile_imageeffect_type: bw
+  tile_imageeffect_reverse: '0'
+tile_textpanel_options:
+  tile_enable_textpanel: '0'
+  tile_textpanel_alwayson: '0'
+  tile_textpanel_position: inside_bottom
+  tile_textpanel_bg: '#000000'
+gridenabled: '0'
+tile_width: ''
+tile_height: ''
+grid_num_rows: '3'
+grid_spc_btw_cols: '20'
+grid_spc_btw_rows: '20'
+navigation_options:
+  navigation_type: bullets
+  navigation_align: center
+  arrow_spc: '20'
+  bullets_color: gray

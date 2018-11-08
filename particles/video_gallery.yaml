@@ -1,0 +1,59 @@
+name: Video Gallery
+description: Create a Video Gallery
+type: particle
+icon: fa-play
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable to the particles.
+      default: true
+
+    videostyle:
+        type: select.selectize
+        label: Video List Style
+        description: Select type.
+        placeholder: 'Select...'
+        default: right-thumb
+        options:
+            right-thumb: With Thumbnail
+            bottom-text: Bottom Text & Desc
+            right-title-only: Right Title Only
+            right-no-thumb: Right No-Thumb
+
+    autoplay:
+      type: enable.enable
+      label: AutoPlay
+      default: false
+
+    items:
+      type: collection.list
+      array: true
+      ajax: true
+      label: Videos
+      fields:
+        .video:
+          type: select.selectize
+          label: Video Site
+          placeholder: "Select..."
+          default: youtube
+          options:
+            youtube: YouTube
+            vimeo: Vimeo
+
+        .video_id:
+          type: input.text
+          label: Video ID
+          description: Video ID. You can find it from video link or site.
+
+        .title:
+          type: input.text
+          label: Video Title
+          description: Image Title
+
+        .desc:
+          type: input.text
+          label: Video Desc
+          description: Image Description

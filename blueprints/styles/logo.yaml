@@ -1,0 +1,20 @@
+name: Logo Style
+description: Font families for the Logo
+type: core
+
+form:
+  fields:
+
+    fontfamily:
+      type: input.fonts
+      label: Logo Font
+      default: 'Lato, Helvetica, Tahoma, Geneva, Arial, sans-serif'
+    fontsize:
+      type: input.text
+      label: Font Size
+      default: "21px"
+    color:
+      type: input.colorpicker
+      label: Logo Color
+      default: "#ffffff"
+    

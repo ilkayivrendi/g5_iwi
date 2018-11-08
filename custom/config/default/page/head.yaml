@@ -1,0 +1,32 @@
+meta: {  }
+head_bottom: ''
+atoms:
+  -
+    id: theme-settings-6929
+    type: theme-settings
+    title: 'Theme Settings'
+    attributes:
+      enabled: '1'
+      WOWjs:
+        enabled: '0'
+        offset: '100'
+        mobile: 'true'
+      uikit:
+        enabled: '1'
+        jslocation: footer
+      headroomjs:
+        enabled: '1'
+        cssselector: ''
+        offset: ''
+        animation: flip
+        mobile: disable
+      cookikecontent:
+        enabled: '1'
+        messagetext: ''
+        rmtext: ''
+        rmlink: ''
+        target: _parent
+        accepttext: ''
+        theme: dark-bottom
+      smoothscrool:
+        enabled: '1'

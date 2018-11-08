@@ -1,0 +1,161 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+{% block particle %}
+
+{% if particle.enabled %}
+{# Add assets into head of the document by using default priority. #}
+{% assets in 'head' with { priority: 0 } %}
+{% do gantry.load('jquery') %}
+ <link rel="stylesheet" href="{{ url('gantry-theme://js/components/unitegallery/css/unite-gallery.css') }}" type="text/css"/>
+ <script type="text/javascript" src="{{ url('gantry-theme://js/components/unitegallery/js/unitegallery.min.js') }}"></script>
+ 
+ {% if particle.tilesenabled %}<script type="text/javascript" src="{{ url('gantry-theme://js/components/unitegallery/themes/tiles/ug-theme-tiles.js') }}"></script>{% set type = 'tiles' %}{% endif %}
+ {% if particle.gridenabled %}<script type='text/javascript' src='{{ url('gantry-theme://js/components/unitegallery/themes/tilesgrid/ug-theme-tilesgrid.js') }}'></script>{% set type = 'tilesgrid' %}{% endif %}
+{% endassets -%}
+{% set randomG = [] %}
+{% for i in 1..10 %}
+    {% set alpha = 'abcdefghijklmnopqrstuvwxyz' %}
+    {% set alphaUpper = alpha|upper %}
+    {% set numbers = '0123456789' %}
+    {% set randomCharacter = random(alpha ~ alphaUpper ~ numbers ~ '-_') %}
+    {% set randomG = randomG|merge([randomCharacter]) %}
+{% endfor %}
+{% set randomG = randomG|join %}
+
+
+{% endif %}
+<div id="gallery{{randomG}}">
+    {% for item in particle.items %}
+                    {%- if item.link %}<a href="{{ item.link }}" title="{{ item.title }}" >{% endif -%}
+                    <img src="{{ url(item.image)|e }}" 
+						alt="{{ item.title }}"  
+						data-image="{{ url(item.image)|e }}" 
+						data-description="{{ item.desc }}"
+	{%- if item.video != 'no' %}data-type="{{ item.video }}"{% endif -%}
+ 	{%- if item.video_id %}data-videoid="{{ item.video_id }}"{% endif -%}></a>
+
+    {% endfor %}
+</div>
+<script type="text/javascript">
+				
+				jQuery(document).ready(function(){
+					
+					jQuery("#gallery{{randomG}}").unitegallery({
+
+					//theme options:	
+					theme_enable_preloader: true,		//enable preloader circle
+					theme_preloading_height: 800,		//the height of the preloading div, it show before the gallery
+					theme_preloader_vertpos: 100,		//the vertical position of the preloader
+					theme_gallery_padding: 0,			//the horizontal padding of the gallery from the sides
+					theme_appearance_order: "normal",	//normal, shuffle, keep - the appearance order of the tiles. The keep is "keep order"
+					
+					//gallery options:
+					gallery_theme: "{{type}}",				//choose gallery theme (if more then one themes includes)
+					gallery_width:"100%",				//gallery width
+					gallery_min_width: 150,				//gallery minimal width when resizing
+					
+					//main options:
+					
+					tile_width:{% if particle.tile_width %}{{ particle.tile_width|default(180) }}{% else %}180{% endif %},						//tile width
+					tile_height:{% if particle.tile_height %}{{ particle.tile_height|default(150) }}{% else %}150{% endif %},						//tile height
+					theme_gallery_padding: 0,				//padding from sides of the //
+
+					//Grid Options
+					grid_padding:10,						//set padding to the grid
+					grid_space_between_cols:{% if particle.grid_spc_btw_cols %}{{ particle.grid_spc_btw_cols|default(20) }}{% else %}20{% endif %},			//space between columns
+					grid_space_between_rows:{% if particle.grid_spc_btw_rows %}{{ particle.grid_spc_btw_rows|default(20) }}{% else %}20{% endif %},			//space between rows
+					grid_num_rows:{% if particle.grid_num_rows %}{{ particle.grid_num_rows|default(3) }}{% else %}3{% endif %},						//maximum number of grid rows. If set to big value, the navigation will not appear.
+					
+					theme_navigation_type: "{% if particle.navigation_options.navigation_type %}{{ particle.navigation_options.navigation_type }}{% else %}bullets{% endif %}",		//bullets, arrows
+					
+					theme_bullets_margin_top: 40,			//the space to bullets
+					theme_bullets_color: "{% if particle.navigation_options.bullets_color %}{{ particle.navigation_options.bullets_color }}{% else %}gray{% endif %}",				//gray, blue, brown, green, red - color of the bullets
+					bullets_space_between: 12,				//space between bullets
+					
+					theme_arrows_margin_top: 20,			//the space between arrows and grid
+					theme_space_between_arrows:{% if particle.navigation_options.arrow_spc %}{{ particle.navigation_options.arrow_spc|default(5) }}{% else %}5{% endif %},			//horizontal space between arrows
+					
+					theme_navigation_align: "{% if particle.navigation_options.navigation_align %}{{ particle.navigation_options.navigation_align }}{% else %}center{% endif %}",		//center, left, right - horizontal align of the navigation
+					theme_navigation_offset_hor: 0,			//horizontal offset of the navigation, according the align
+
+
+					//tiles options:
+                    tiles_type:"{{particle.style}}",
+					tiles_col_width: {% if particle.tiles_settings.tiles_col_width %}{{ particle.tiles_settings.tiles_col_width }} {% else %} 250 {% endif %},					//column width - exact or base according the settings
+		 			tiles_align:"center",					//align of the tiles in the space
+					tiles_exact_width: false,				//exact width of column - disables the min and max columns
+					tiles_space_between_cols: {% if particle.tiles_settings.tiles_space %}{{ particle.tiles_settings.tiles_space }} {% else %} 10 {% endif %},			//space between images
+					tiles_space_between_cols_mobile: 3,     //space between cols for mobile type
+					tiles_include_padding: true,			//include padding at the sides of the columns, equal to current space between cols
+					tiles_min_columns: 2,					//min columns
+					tiles_max_columns: 0,					//max columns (0 for unlimited)
+					
+					tiles_set_initial_height: true,			//columns type related only
+		 			tiles_enable_transition: true,			//enable transition when screen width change
+
+					//tile design options:
+															
+					tile_enable_border: {% if particle.tiles_settings.tile_border %}{{particle.tiles_settings.tile_border}} {% else %} false {% endif %},			//enable border of the tile
+					tile_border_width: {% if particle.tiles_settings.tile_border_width %} {{particle.tiles_settings.tile_border_width}} {% else %} 0 {% endif %},				//tile border width
+					tile_border_color: "{% if particle.tiles_settings.tile_border_color %} {{particle.tiles_settings.tile_border_color}} {% else %} #212121 {% endif %}",		//tile border color
+					tile_border_radius:{% if particle.tiles_settings.tile_border_radius %} {{particle.tiles_settings.tile_border_radius}} {% else %} 0 {% endif %},				//tile border radius (applied to border only, not to outline)
+					
+					tile_enable_outline: {% if particle.tiles_settings.tile_outline %} true {% else %} false {% endif %},			//enable outline of the tile (works only together with the border)
+					tile_outline_color: "{% if particle.tiles_settings.tile_outline_color %} {{particle.tiles_settings.tile_outline_color }} {% endif %}",		//tile outline color
+					
+					tile_enable_shadow:{% if particle.tiles_settings.tile_shadow %} true {% else %} false {% endif %},			//enable shadow of the tile
+					tile_shadow_h:1,					//position of horizontal shadow
+					tile_shadow_v:1,					//position of vertical shadow
+					tile_shadow_blur:3,					//shadow blur
+					tile_shadow_spread:2,				//shadow spread
+					tile_shadow_color:"{% if particle.tiles_settings.tile_shadow_color %} {{particle.tiles_settings.tile_shadow_color }} {% endif %}",		//shadow color
+					
+					tile_enable_action: true	,			//enable tile action on click like lightbox
+					tile_as_link: false,				//act the tile as link, no lightbox will appear
+					tile_link_newpage: true,			//open the tile link in new page
+		
+					tile_enable_overlay: {% if particle.tiles_settings.tile_overlay %} true {% else %} false {% endif %},			//enable tile color overlay (on mouseover)
+					tile_overlay_color: "{% if particle.tiles_settings.tile_overlay_color %}{{ particle.tiles_settings.tile_overlay_color }}{% endif %}",		//tile overlay color
+					tile_enable_icons: {% if particle.tiles_settings.tile_enable_icons %} true {% else %} false {% endif %},			//enable icons in mouseover mode
+					tile_show_link_icon:{% if particle.tiles_settings.tile_show_link %} true {% else %} false {% endif %},		//show link icon (if the tile has a link). In case of tile_as_link this option not enabled
+					tile_space_between_icons: 26,		//initial space between icons, (on small tiles it may change)	
+					tile_enable_image_effect:{% if particle.tiles_settings.tile_image_effect %} true {% else %} false {% endif %},		//enable tile image effect
+					tile_image_effect_type: "{% if particle.tiles_settings.tile_imageeffect_type %}{{particle.tiles_settings.tile_imageeffect_type }}{% endif %}",		//bw, blur, sepia - tile effect type
+					tile_image_effect_reverse: {% if particle.tiles_settings.tile_imageeffect_reverse %} true {% else %} false {% endif %},	//reverce the image, set only on mouseover state
+					
+					//tile text panel options:		
+					tile_enable_textpanel: {% if particle.tile_textpanel_options.tile_enable_textpanel %} true {% else %} false {% endif %},		 	//enable textpanel
+					tile_textpanel_source: "title",		 	//title,desc,desc_title. source of the textpanel. desc_title - if description empty, put title
+					tile_textpanel_always_on: {% if particle.tile_textpanel_options.tile_textpanel_alwayson %} true {% else %} false {% endif %}, 	//textpanel always visible
+					tile_textpanel_appear_type: "slide", 	//slide, fade - appear type of the textpanel on mouseover
+					tile_textpanel_position:"{% if particle.tile_textpanel_options.tile_textpanel_position %}{{particle.tile_textpanel_options.tile_textpanel_position }}{% endif %}", //inside_bottom, inside_top, inside_center, top, bottom the position of the textpanel
+					tile_textpanel_offset:0,			    //vertical offset of the textpanel				
+					tile_textpanel_padding_top:8,		 	//textpanel padding top 
+					tile_textpanel_padding_bottom:8,	 	//textpanel padding bottom
+					tile_textpanel_padding_right: 11,	 	//cut some space for text from right
+					tile_textpanel_padding_left: 11,	 	//cut some space for text from left
+					tile_textpanel_bg_opacity: 0.4,		 	//textpanel background opacity
+					tile_textpanel_bg_color:"{% if particle.tile_textpanel_options.tile_textpanel_bg %}{{particle.tile_textpanel_options.tile_textpanel_bg}}{% endif %}", 	//textpanel background color
+				
+		 			//lightbox options:
+					lightbox_type: "wide",							//compact / wide - lightbox type
+					lightbox_hide_arrows_onvideoplay: true,			//hide the arrows when video start playing and show when stop
+					lightbox_arrows_position: "sides",				//sides, inside: position of the arrows, used on compact type			
+					lightbox_arrows_offset: 10,						//The horizontal offset of the arrows
+					lightbox_arrows_inside_offset: 10,				//The offset from the image border if the arrows placed inside
+					lightbox_arrows_inside_alwayson: false,			//Show the arrows on mouseover, or always on.
+					lightbox_overlay_opacity:0.6,						//the opacity of the overlay. for compact type - 0.6
+					lightbox_close_on_emptyspace:true,				//close the lightbox on empty space
+					lightbox_show_numbers: true,					//show numbers on the right side
+				    lightbox_slider_image_border: true,				//enable border around the image (for compact type only)
+				    lightbox_slider_image_border_width: 5,			//image border width
+				    lightbox_slider_image_border_color: "#ffffff",	//image border color
+				    lightbox_slider_image_border_radius: 3,			//image border radius
+				    lightbox_slider_image_shadow: true,				//enable border shadow the image	
+				    lightbox_slider_control_swipe:true,				//true,false - enable swiping control
+				    lightbox_slider_control_zoom:true,				//true, false - enable zooming control
+								
+					});
+				});
+				
+				</script>
+{% endblock %}

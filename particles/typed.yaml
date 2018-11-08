@@ -1,0 +1,44 @@
+name: Typed Animation
+description: Add self written and deleten sentences
+type: particle
+icon: fa-space-shuttle
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+
+    css.class:
+      type: input.text
+      label: CSS Classes
+      description: CSS class name for the particle.
+    
+    title:
+     type: input.text
+     label: Title
+     description: Title for box 
+
+    loop:
+     type: enable.enable
+     label: Loop
+     descriptipn: Will return first sentence if enabled.
+
+    items:
+      type: collection.list
+      array: true
+      label: Animated Sentences
+      value: title
+      ajax: true
+      fields:
+        .typed.text:
+          type: input.text
+          label: Text
+          description: Enter text of animation.
+
+
+
+    
+    

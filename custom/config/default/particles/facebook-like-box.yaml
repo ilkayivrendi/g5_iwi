@@ -1,0 +1,10 @@
+enabled: '1'
+url: ''
+height: ''
+showface: '1'
+hidecover: '0'
+smallheader: '0'
+tabs:
+  timeline: '0'
+  events: '0'
+  messages: '0'

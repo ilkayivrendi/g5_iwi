@@ -1,0 +1,66 @@
+name: Adaptive Modal
+description: Create a Styled Adaptive Modal
+type: particle
+icon: fa-id-card-o
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+
+    buttonicon:
+      type: input.icon
+      label: Button Icon
+      description: Select the icon you would like to use.
+    
+    buttonlabel:
+      type: input.text
+      label: Button Label
+      description: Give your button a label
+    
+    buttonsize:
+      type: select.select
+      label: Button Size
+      description: Select your Adaptive Button Size
+      default: ''
+      options: 
+        button-xsmall: "Button XSmall"
+        button-small: "Button Small"
+        button-large: "Button Large"
+        button-xlarge: "Button Xlarge"
+        button-block: "Button Block"
+
+    buttonstyle:
+      type: select.select
+      label: Button Style
+      description: Select your Adaptive Button Style
+      options: 
+        button-outline: "Button Outline"
+        button-gradient: "Button Gradient"
+        button-2: "Button Color-2"
+        
+    buttontype:
+      type: select.select
+      label: Button Type
+      options:
+        1: Button Normal
+        button-bevel: Button Bevel
+        button-oval: Button Oval
+
+    buttoncolor:
+      type: input.colorpicker
+      label: Button Color
+      description: Personalize button color different then theme.
+    
+    textcolor:
+      type: input.colorpicker
+      label: Button Text Color
+      description: Personalize text color
+      
+    content:
+      type: textarea.textarea
+      label: Content Area 
+      description: This area is for your modal content. You can freely use HTML

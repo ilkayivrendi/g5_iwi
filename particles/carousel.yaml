@@ -1,0 +1,65 @@
+name: Brand Carousel
+description: Brand Carousel
+type: particle
+icon: fa-home
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable Joomla Articles particles.
+      default: true
+
+    style:
+      type: select.select
+      label: Style
+      description: Choose type
+      default: 1
+      options:
+        1: style1
+        2: style2
+        
+    numbercompany:
+      type: select.select
+      label: Number of colum
+      description: Enter the maximum number colum.
+      placeholder: '4'
+      default: 4
+      options:
+        3: 3
+        4: 4
+        5: 5
+
+    height:
+      type: input.number
+      label: Image height
+      description: Image height
+      placeholder: '100'
+
+    class:
+      type: input.selectize
+      label: CSS Classes
+      description: CSS class name for the particle.
+      default:
+      
+    items:
+      type: collection.list
+      array: true
+      label: Items
+      description: Create each items to display.
+      value: name
+      ajax: true
+      fields:
+        .cpnimage:
+          type: input.imagepicker
+          label: Logo
+        .cpnlogo:
+          type: input.icon
+          label: Icon
+        .cpnname:
+          type: input.text
+          label: Title
+        .link:
+          type: input.text
+          label: Link

@@ -1,0 +1,118 @@
+name: Share Buttons
+description: Options for Share Buttons
+type: single
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable Theme Settings atom.
+      default: true
+
+    themes:
+      label: Theme
+      type: select.selectize
+      description: Select your theme for share buttons
+      options:
+        flat: Flat
+        classic: Classic
+        minimal: Minimal
+        plain: Plain
+      
+    fontsize:
+      label: Font Size
+      type: select.select
+      description: Select your button size.
+      default: 14
+      options:
+        8: 8
+        10: 10
+        12: 12
+        14: 14
+        16: 16
+        18: 18
+        20: 20
+        24: 24
+    
+    round:
+      label: Round Icons
+      type: enable.enable
+      description: If enabled rounds share buttons
+      default: 0
+
+    twittername:
+      label: Twitter Name
+      type: input.text
+      description: Add Your Twitter Name if you want to show your twitter address on shares. Don't use @
+
+    showlabel:
+      label: Show Label
+      type: enable.enable
+      description: Show Label at Share Buttons
+
+    showcount:
+      label: Show Count
+      type: select.select
+      description: Select count propertie.
+      options:
+        true: "True"
+        false: "False"
+        '"inside"': "Inside"
+    
+    sharebuttons:
+      type: container.set
+      label: Share Buttons
+      fields:
+        .email:
+          type: enable.enable
+          label: E-mail
+          default: 1
+        .twitter:
+          type: enable.enable
+          label: Twitter
+          default: 1
+        .facebook:
+          type: enable.enable
+          label: Facebook
+          default: 1
+        .googleplus:
+          type: enable.enable
+          label: Google Plus
+          default: 1
+        .linkedin:
+          type: enable.enable
+          label: LinkedIn
+          default: 1
+        .pinterest:
+          type: enable.enable
+          label: Pinterest
+          default: 1
+        .stumbleupon:
+          type: enable.enable
+          label: Stumbleupon
+          default: 1
+        .whatsapp:
+          type: enable.enable
+          label: WhatsApp
+          default: 1
+        .telegram:
+          type: enable.enable
+          label: Telegram
+          default: 1
+        .viber:
+          type: enable.enable
+          label: Viber
+          default: 1
+        .pocket:
+          type: enable.enable
+          label: Pocket
+          default: 1
+        .messenger:
+          type: enable.enable
+          label: Facebook Messenger
+          default: 1
+        .vkontakte:
+          type: enable.enable
+          label: Vkontakte
+          default: 1       

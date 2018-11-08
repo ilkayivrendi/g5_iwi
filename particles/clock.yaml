@@ -1,0 +1,33 @@
+name: Digital Clock
+description: Add Digiral Flipping Clock to your site.
+type: particle
+icon: fa-clock-o
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the particle.
+      default: true
+
+    scale:
+      type: input.range
+      label: Scale Size
+      description: Scale the Clock Size
+      min: 1
+      max: 9
+        
+    style:
+      type: select.selectize
+      label: Clock Style
+      description: Select clock format 12hr or 24hr format.
+      options:
+        TwelveHourClock: 12 Hour Clock
+        TwentyFourHourClock: 24 Hour Clock
+      
+    seconds:
+      type: input.checkbox
+      label: Show Seconds
+      description: Select this checkbox if you want to show second counter
+      default: true

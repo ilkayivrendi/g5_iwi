@@ -1,0 +1,12 @@
+preset: preset2
+header:
+  background: '#312f38'
+intro:
+  background: '#f4f5f7'
+  text-color: '#424753'
+features:
+  text-color: '#424753'
+above:
+  text-color: '#424753'
+expanded:
+  text-color: '#424753'

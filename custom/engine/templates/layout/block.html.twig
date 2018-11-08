@@ -1,0 +1,33 @@
+{% set attr_extra = '' %}
+{% set attr_background = segment.attributes.background %}
+{% set attr_backgroundcolor = segment.attributes.backgroundcolor %}
+{% if segment.attributes.extra %}
+    {% for attributes in segment.attributes.extra %}
+        {% for key, value in attributes %}
+            {% set attr_extra = attr_extra ~ ' ' ~ key|e ~ '="' ~ value|e('html_attr') ~ '"' %}
+        {% endfor %}
+    {% endfor %}
+{% endif %}
+
+{% set html %}
+    {% if segment.children %}
+        {% for segment in segments %}
+            {% if segment.content %}
+                {{ segment.content|raw }}
+            {% else %}
+                {% include ['@nucleus/content/' ~ segment.type ~ '.html.twig', '@nucleus/layout/' ~ segment.type ~ '.html.twig'] with { 'segments': segment.children } %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endset %}
+
+{% if html|trim %}
+{% if attr_background %}<div class="section-background" style="background-image: url({{ url(attr_background) }}); ">{% endif %}
+    <div {% if segment.attributes.id %}id="{{ segment.attributes.id|e }}"{% endif %}
+        {{ attr_extra|raw }}
+         class="g-block {{ segment.attributes.variations ? ' ' ~ segment.attributes.variations|join(' ')|e }}{{ segment.attributes.class ? ' ' ~ segment.attributes.class|join(' ')|e }} {% if segment.attributes.animationenable %} wow {{segment.attributes.animation}} {% endif %}{{ segment.attributes.size|toGrid }}" {% if attr_backgroundcolor %}style="background-color:{{attr_backgroundcolor}} {% endif %}">
+        {{ html|raw }}
+    </div>
+{% if attr_background %}</div>{% endif %}
+{% endif %}
+

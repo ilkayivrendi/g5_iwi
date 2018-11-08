@@ -1,0 +1,62 @@
+name: home_-_particles
+timestamp: 1541688189
+version: 7
+preset:
+  image: 'gantry-admin://images/layouts/default.png'
+  name: home_-_particles
+  timestamp: 1468340932
+positions: {  }
+sections:
+  navigation: Navigation
+  intro: Intro
+  features: Features
+  utility: Utility
+  above: Above
+  testimonials: Testimonials
+  expanded: Expanded
+  header: Header
+  mainbar: Mainbar
+  sidebar: Sidebar
+  footer: Footer
+  offcanvas: Offcanvas
+particles:
+  logo:
+    logo-1081: 'Logo / Image'
+    logo-3142: 'Logo / Image'
+  menu:
+    menu-6885: Menu
+  social:
+    social-3366: Social
+  slideshow:
+    slideshow-9860: 'Header Slider'
+  custom:
+    custom-5807: Intro
+    custom-6355: 'Develop CMS themes quickly'
+  card:
+    card-5866: 'Joomla Card'
+    card-9434: 'Wordpress Card'
+    card-1761: Grav
+  tabs:
+    tabs-3854: 'Content Tabs'
+  contentcubes:
+    contentcubes-7850: 'Content Cubes'
+  testimonial:
+    testimonial-5241: Testimonials
+  horizontalmenu:
+    horizontalmenu-1630: 'Horizontal Menu'
+  totop:
+    totop-8150: 'To Top'
+  mobile-menu:
+    mobile-menu-1716: Mobile-menu
+inherit:
+  default:
+    navigation: navigation
+    logo-1081: logo-9608
+    menu-6885: menu-6409
+    social-3366: social-3171
+    footer: footer
+    logo-3142: logo-9571
+    horizontalmenu-1630: horizontalmenu-9034
+    totop-8150: totop-8670
+    offcanvas: offcanvas
+    mobile-menu-1716: mobile-menu-5697

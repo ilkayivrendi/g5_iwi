@@ -1,0 +1,32 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+{% block particle %}
+    {% set presets = gantry.theme.presets %}
+    <div class="theme-switch-block">
+        <ul class="g-sublevel">
+            {% for key, preset in presets %}
+                {% set presetsTheme = gantry.theme.preset %}
+                {% set counter = 0 %}
+                <li class="g-menu-item">
+                    {% if preset.colors | length %}
+                        {% set stop = (100 / preset.colors | length) | number_format(3, '.') %}
+                        <a href="{{ gantry.page.url() }}?presets={{key}}" class="g-menu-item-container">
+                            <span class="g-menu-item-content">
+                             <img class="theme-colors" style="background: linear-gradient(to right
+                                      {% for color in preset.colors -%}
+                                        ,{{- color }} {{ counter -}}%, {{- color }} {{ counter + stop -}}%
+                                        {% set counter = counter + stop %}      
+                                       {%- endfor %})">
+                                <span class="g-menu-item-title">
+                                    {{ preset.name|trans|raw }}
+                                     {% if  presetsTheme == key %}
+                                    <i class="fa fa-fw fa-star" aria-hidden="true"></i>
+                                    {% endif %}
+                                </span>
+                            </span>
+                        </a>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

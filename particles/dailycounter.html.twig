@@ -1,0 +1,48 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}
+    {% assets in 'head' with { priority: 11 } %}
+        {% if particle.enabled %}
+            <link rel="stylesheet" href="{{ url('gantry-theme://scss/iwi/components/flipclock.css') }}" type="text/css"/>         
+        {% endif %}
+    {% endassets -%}
+
+    {% assets in particle.jslocation|default('footer') with { priority: 10 } %}
+        {% if particle.enabled %}
+            {% do gantry.load('jquery') %}
+            <script src="{{ url('gantry-theme://js/components/flipclock.min.js') }}" type="text/javascript"></script>
+        {% endif %}
+    {% endassets -%}
+
+    <div class="{% if particle.css.class %} {{ particle.css.class }}{% endif %}">
+        <div class="clock" style="margin:2em;"></div>
+	    <div class="message"></div>
+   </div>
+
+        <script type="text/javascript">
+		jQuery(document).ready(function() {
+			var clock;
+			clock = jQuery('.clock').FlipClock({
+		        clockFace: 'DailyCounter',
+		        autoStart: false,
+		        callbacks: {
+		        	stop: function() {
+		        		jQuery('.message').html('The clock has stopped!')
+		        	}
+		        }
+		    });
+
+            var day = {{particle.day}} * 86400;
+            var hour = {{particle.hour}} * 3600;
+            var minute = {{particle.minute}} * 60;
+            
+            var sum = day + hour + minute;
+		    clock.setTime(sum);
+		    clock.setCountdown(true);
+		    clock.start();
+
+		});
+	</script>
+
+   
+{% endblock %}

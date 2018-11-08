@@ -1,0 +1,5 @@
+{% extends '@nucleus/partials/particle.html.twig' %}
+
+{% block particle %}     
+    <a href="{{ particle.url }}" target="{{ particle.target|default('_self') }}" title="{{ particle.text }}" class="button {{ particle.buttonsize }} {{ particle.buttontype }} {{ particle.buttonstyle }}">{% if particle.buttonicon %}<span class="fa {{particle.buttonicon}}"></span> {% endif %}{{ particle.text }}</a>
+{% endblock %}

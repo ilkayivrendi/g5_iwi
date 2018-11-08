@@ -1,0 +1,34 @@
+@include import-font($logo-fontfamily);
+
+.g-logo {
+    font-family: get-font-family($logo-fontfamily);
+    font-weight: $font-weight-ultrabold;
+    font-size: $logo-fontsize;
+    color: $logo-color;
+    vertical-align: middle;
+
+    img, svg {
+        display: block;
+    }
+
+    &.g-logo-iwi {
+        img, svg {
+            max-height: 50px;
+        }
+
+        svg {
+            fill: $white;
+        }
+    }
+
+	@include breakpoint(mobile-only) {
+		display: block;
+		text-align: center;
+		margin: -0.85rem 0;
+        padding-left: $content-padding;
+
+        img, svg {
+            margin: 0 auto;
+        }
+	}
+}
