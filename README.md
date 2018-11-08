@@ -1,7 +1,7 @@
 # g5_iwi
 Gantry 5 IWI (ivrendi web interface) Core Wordpress Theme
 
-## Join Live Char
+## Join Live Chart
 
 [![Join the chat at https://gitter.im/gantry/gantry5](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gantry/gantry5?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -37,9 +37,9 @@ If plugin is not activated theme wont work!
 
 Here, you will see a list of wordpress properties and at last you can reach the IWI Wordpress Framework
 
-## Navigating the Gantry 5 Administrator
+## How to Navigate at IWI Admin Dashboard
 
-The Gantry Administrator has multiple administrative tools you can flip through to configure how your Gantry-powered theme looks and functions. Here is a quick breakdown of each of these tools, and what you can do with them.
+The IWI Administrator has multiple administrative tools you can flip through to configure how your Gantry-powered theme looks and functions. Here is a quick breakdown of each of these tools, and what you can do with them.
 
 You will notice the following menu items in the IWI Administrator:
 
@@ -79,7 +79,7 @@ A chat room has been set up using [Gitter](https://gitter.im/gantry/gantry5) whe
 
 [Documentation](http://docs.gantry.org) is also available, and being continually added to as development progresses. Is something missing? You can contribute to the documentation through GitHub.
 
-For Custom Works visit [I'm an inline-style link with title](https://ivrenditech.com "Ivrendi Tech")
+[**For Custom Works visit**] [I'm an inline-style link with title](https://ivrenditech.com "Ivrendi Tech")
 
 ## How to Contribute
 
