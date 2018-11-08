@@ -79,7 +79,7 @@ A chat room has been set up using [Gitter](https://gitter.im/gantry/gantry5) whe
 
 [Documentation](http://docs.gantry.org) is also available, and being continually added to as development progresses. Is something missing? You can contribute to the documentation through GitHub.
 
-[**For Custom Works visit**] [I'm an inline-style link with title](https://ivrenditech.com "Ivrendi Tech")
+| [Custom Projects by IvrendiTech](https://ivrenditech.com) |
 
 ## How to Contribute
 
