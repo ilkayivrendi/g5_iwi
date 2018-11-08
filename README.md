@@ -1,13 +1,11 @@
 # g5_iwi
 Gantry 5 IWI (ivrendi web interface) Core Wordpress Theme
 
-
-Gantry Framework [![Build Status](https://travis-ci.org/gantry/gantry5.svg)](https://travis-ci.org/gantry/gantry5)
-================
+## Join Live Char
 
 [![Join the chat at https://gitter.im/gantry/gantry5](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gantry/gantry5?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Ready to get started with Gantry 5? That's great! We are here to help.
+Ready to get started with IWI and Gantry 5? That's great! We are here to help.
 
 On this page, you will get some quick tips to help you hit the ground running with Gantry 5. You can find more detailed documentation for each of these tips by clicking the **Learn More** button at the bottom of each section.
 
